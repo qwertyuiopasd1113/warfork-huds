@@ -1,0 +1,59 @@
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include zoom
+include damage_indicator_screen
+include damage_numbers
+include crosshair
+
+include adem/chasing
+include strafe
+include download
+include net
+
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include chat
+include awards
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+setCursor 0 0
+setAlign 0 0
+setSize 800 600
+setColor 0 0 0 0.5
+drawPicByName *whiteImage
+setAlign 1 3
+
+setCursor 0, 600
+
+setFontFamily con_fontSystemMono
+setFontSize %VIDHEIGHT / 70
+
+setColor 1 1 1 1
+drawString "Speed"
+moveCursor 0, -10
+drawString "Ammo"
+moveCursor 0, -10
+drawString "AP"
+moveCursor 0, -10
+drawString "HP"
+
+setCursor 30, 600
+
+setFontFamily con_fontSystemMono
+setFontSize %VIDHEIGHT / 70
+
+setColor 1 1 1 1
+drawStringNum %SPEED
+moveCursor 0, -10
+drawStringNum %AMMO
+moveCursor 0, -10
+drawStringNum %ARMOR
+moveCursor 0, -10
+drawStringNum %HEALTH
+
+endif

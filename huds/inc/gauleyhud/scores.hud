@@ -1,0 +1,417 @@
+if %TEAMBASED
+if %TEAM_ALPHA_SCORE != #NOTSET
+if %TEAM_BETA_SCORE != #NOTSET
+
+setfontfamily "Fredoka SemiCondensed"
+setfontstyle normal
+setfontsize %VIDHEIGHT / 30
+
+setCursor #WIDTH / 2, 40
+if %SHOW_TIMER == 2
+	setCursor 430, 500
+endif
+if %TEAM == #TEAM_SPECTATOR
+	setCursor 430, 30
+endif
+moveCursor 0, 12
+setAlign 2 2
+
+// < = > signs for score (like spec hud)
+
+if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
+	if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		drawString "\="
+		moveCursor 0, -1
+		drawString "\="
+		moveCursor 0, -1
+		drawString "\="
+		moveCursor 1, 0
+		drawString "\="
+		moveCursor 1, 0
+		drawString "\="
+		moveCursor 0, 1
+		drawString "\="
+		moveCursor 0, 1
+		drawString "\="
+		moveCursor -1, -1
+	endif
+	setColor 1 1 1 1
+	drawString "\="
+endif
+
+if %TEAM_ALPHA_SCORE != %TEAM_BETA_SCORE
+if %TEAM == #TEAM_ALPHA
+	if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
+		if %SHOW_SPEED < 2
+			setColor 0 0 0 1
+			drawString "\<"
+			moveCursor 0, -1
+			drawString "\<"
+			moveCursor 0, -1
+			drawString "\<"
+			moveCursor 1, 0
+			drawString "\<"
+			moveCursor 1, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor -1, -1
+		endif
+		setColor 1 1 1 1
+		drawString "\<"
+	endif
+
+	if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
+		if %SHOW_SPEED < 2
+			setColor 0 0 0 1
+			drawString "\>"
+			moveCursor 0, -1
+			drawString "\>"
+			moveCursor 0, -1
+			drawString "\>"
+			moveCursor 1, 0
+			drawString "\>"
+			moveCursor 1, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor -1, -1
+		endif
+		setColor 1 1 1 1
+		drawString "\>"
+	endif
+endif
+
+if %TEAM == #TEAM_BETA
+	if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
+		if %SHOW_SPEED < 2
+			setColor 0 0 0 1
+			drawString "\<"
+			moveCursor 0, -1
+			drawString "\<"
+			moveCursor 0, -1
+			drawString "\<"
+			moveCursor 1, 0
+			drawString "\<"
+			moveCursor 1, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor -1, -1
+		endif
+		setColor 1 1 1 1
+		drawString "\<"
+	endif
+
+	if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
+		if %SHOW_SPEED < 2
+			setColor 0 0 0 1
+			drawString "\>"
+			moveCursor 0, -1
+			drawString "\>"
+			moveCursor 0, -1
+			drawString "\>"
+			moveCursor 1, 0
+			drawString "\>"
+			moveCursor 1, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor -1, -1
+		endif
+		setColor 1 1 1 1
+		drawString "\>"
+	endif
+endif
+endif
+
+
+
+setFontSize %VIDHEIGHT / 30
+moveCursor -20, 0
+setfontfamily "Anton"
+
+if %TEAM == #TEAM_ALPHA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM
+	drawStringNum %TEAM_ALPHA_SCORE
+endif
+if %TEAM == #TEAM_BETA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM
+	drawStringNum %TEAM_BETA_SCORE
+
+endif
+
+if %SHOW_TEAM_LOCATIONS > 1
+// TEAM NAMES
+setFontSize %VIDHEIGHT / 50
+moveCursor -10, 0
+setAlign 3 2
+setFontFamily "Fredoka SemiCondensed"
+if %TEAM == #TEAM_ALPHA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM
+	drawStatString #TEAM_ALPHA_NAME
+endif
+if %TEAM == #TEAM_BETA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM
+	drawStatString #TEAM_BETA_NAME
+endif
+moveCursor 10, 0
+setFontFamily "Anton"
+setFontSize %VIDHEIGHT / 30
+setAlign 2 2
+endif
+
+//ENEMY TEAM
+moveCursor 2 * 20, 0
+if %TEAM == #TEAM_BETA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM_ENEMY
+	drawStringNum %TEAM_ALPHA_SCORE
+endif
+if %TEAM == #TEAM_ALPHA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM_ENEMY
+	drawStringNum %TEAM_BETA_SCORE
+endif
+if %SHOW_TEAM_LOCATIONS > 1
+// TEAM NAMES
+setAlign 1 2
+setFontSize %VIDHEIGHT / 50
+moveCursor 10, 0
+setFontFamily "Fredoka SemiCondensed"
+if %TEAM == #TEAM_ALPHA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_BETA_NAME
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM_ENEMY
+	drawStatString #TEAM_BETA_NAME
+endif
+if %TEAM == #TEAM_BETA
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, -1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor -1, 0
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 0, 1
+		drawCleanStatString #TEAM_ALPHA_NAME
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor %TEAM_ENEMY
+	drawStatString #TEAM_ALPHA_NAME
+endif
+moveCursor -10, 0
+setFontFamily "Anton"
+setFontSize %VIDHEIGHT / 30
+setalign 2 2
+endif
+
+
+
+moveCursor -20, 0
+if %TEAM == #TEAM_SPECTATOR
+	moveCursor -20, 0
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor #TEAM_ALPHA
+	drawStringNum %TEAM_ALPHA_SCORE
+	moveCursor 2 * 20, 0
+    if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1, -1
+	endif
+	setColorToTeamColor #TEAM_BETA
+	drawStringNum %TEAM_BETA_SCORE
+endif
+
+endif
+endif
+endif

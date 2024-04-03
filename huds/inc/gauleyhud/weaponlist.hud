@@ -1,0 +1,31 @@
+if %TEAM != #TEAM_SPECTATOR
+if %INSTAGIB == 0
+
+setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/gauleyhud/wpl/1gb
+setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/gauleyhud/wpl/2mg
+setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/gauleyhud/wpl/3rg
+setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/gauleyhud/wpl/4gl
+setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/gauleyhud/wpl/5rl
+setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/gauleyhud/wpl/6pg
+setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/gauleyhud/wpl/7lg
+setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/gauleyhud/wpl/8eb
+setCustomWeaponIcons #ITEM_INSTAGUN 1 gfx/gauleyhud/wpl/9ig
+
+setCustomWeaponIcons #ITEM_GUNBLADE 0 gfx/gauleyhud/wpln/1gb
+setCustomWeaponIcons #ITEM_MACHINEGUN 0 gfx/gauleyhud/wpln/2mg
+setCustomWeaponIcons #ITEM_RIOTGUN 0 gfx/gauleyhud/wpln/3rg
+setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 gfx/gauleyhud/wpln/4gl
+setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 gfx/gauleyhud/wpln/5rl
+setCustomWeaponIcons #ITEM_PLASMAGUN 0 gfx/gauleyhud/wpln/6pg
+setCustomWeaponIcons #ITEM_LASERGUN 0 gfx/gauleyhud/wpln/7lg
+setCustomWeaponIcons #ITEM_ELECTROBOLT 0 gfx/gauleyhud/wpln/8eb
+setCustomWeaponIcons #ITEM_INSTAGUN 0 gfx/gauleyhud/wpln/9ig
+
+setCustomWeaponSelect "gfx/gauleyhud/wpl/1gb"
+
+setAlign 2 2
+setCursor 400, 470
+drawWeaponIcons 40 * %VIDHEIGHT / %VIDWIDTH, 0, 35 * %VIDHEIGHT / %VIDWIDTH 12
+drawWeaponStrongAmmo 40 * %VIDHEIGHT / %VIDWIDTH, 0, 9
+endif
+endif

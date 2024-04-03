@@ -1,0 +1,90 @@
+
+/* Clock */
+setCursor #WIDTH / 2, 0
+if %SHOW_TIMER == 2
+	setCursor 370, 480
+endif
+if %TEAM == #TEAM_SPECTATOR
+	if %TEAMBASED == 1 //is team based gametype
+		setCursor 370, 10
+	endif
+endif
+if %RACE == 1
+	setCursor 400, 370
+endif
+
+setFontFamily "Anton"
+setAlign 2 1 //can't be vertically aligned (bug or something)
+setFontSize %VIDHEIGHT / 20
+if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		drawClock
+		moveCursor 0, -1
+		drawClock
+		moveCursor 0, -1
+		drawClock
+		moveCursor 1, 0
+		drawClock
+		moveCursor 1, 0
+		drawClock
+		moveCursor 0, 1
+		drawClock
+		moveCursor 0, 1
+		drawClock
+		moveCursor -1, -1
+	endif
+setColor 1 1 1 1
+drawClock
+
+touchScores
+
+// MATCH STATES
+setFontFamily "Bebas Neue"
+setFontSize %VIDHEIGHT / 48
+setAlign 2 1
+setCursor #WIDTH / 2, 60
+if %SHOW_TIMER == 2
+	setCursor #WIDTH / 2, 520
+endif
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		drawString WARMUP
+		moveCursor 0, -1
+		drawString WARMUP
+		moveCursor 0, -1
+		drawString WARMUP
+		moveCursor 1, 0
+		drawString WARMUP
+		moveCursor 1, 0
+		drawString WARMUP
+		moveCursor 0, 1
+		drawString WARMUP
+		moveCursor 0, 1
+		drawString WARMUP
+		moveCursor -1, -1
+	endif
+	setColor 1 0.4 0.4 1
+	drawString WARMUP
+endif
+if %OVERTIME
+	if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		drawString OVERTIME
+		moveCursor 0, -1
+		drawString OVERTIME
+		moveCursor 0, -1
+		drawString OVERTIME
+		moveCursor 1, 0
+		drawString OVERTIME
+		moveCursor 1, 0
+		drawString OVERTIME
+		moveCursor 0, 1
+		drawString OVERTIME
+		moveCursor 0, 1
+		drawString OVERTIME
+		moveCursor -1, -1
+	endif
+	setColor 1 0.4 0.4 1
+	drawString OVERTIME
+endif

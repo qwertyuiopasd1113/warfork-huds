@@ -1,0 +1,27 @@
+if %CHASING != #NOTSET
+	setAlign 2 2
+	setCursor 400, 440
+	setFontFamily "Fredoka SemiCondensed"
+	setFontSize %VIDHEIGHT / 25
+
+    if %SHOW_SPEED < 2
+        setColor 0 0 0 1
+        drawCleanPlayerName %CHASING
+        moveCursor 0, -1
+        drawCleanPlayerName %CHASING
+        moveCursor 0, -1
+        drawCleanPlayerName %CHASING
+        moveCursor 1, 0
+        drawCleanPlayerName %CHASING
+        moveCursor 1, 0
+        drawCleanPlayerName %CHASING
+        moveCursor 0, 1
+        drawCleanPlayerName %CHASING
+        moveCursor 0, 1
+        drawCleanPlayerName %CHASING
+        moveCursor -1, -1
+    endif
+
+	setColor 1 1 1 1
+	drawPlayerName %CHASING
+endif

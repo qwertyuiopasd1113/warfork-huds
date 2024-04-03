@@ -1,0 +1,66 @@
+setColor 1 1 1 1
+setFontFamily "Stratum2"
+setFontStyle Bold
+
+if %SCORE != #NOTSET
+ifnot %TEAMBASED
+	setCursor #WIDTH / 2, 460
+	moveCursor -40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setAlign 2, 2
+	setColor 1 1 1 1
+	setColorAlpha 1
+	setFontSize %VIDHEIGHT / 40
+	if %SHOW_SPEED < 2
+		setColor 0.12 0.12 0.12 1
+		drawString "Score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "Score:"
+		moveCursor 0, 1
+		drawString "Score:"
+		moveCursor 0, -2
+		drawString "Score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "Score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "Score:"
+		moveCursor 0, 1
+		drawString "Score:"
+		moveCursor 0, 1
+		drawString "Score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "Score:"
+		moveCursor 0, -1
+
+		setColor 1 1 1 1
+	endif
+	drawString "Score:"
+	moveCursor 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setFontSize %VIDHEIGHT / 20
+
+	if %SHOW_SPEED < 2
+		setColor 0.12 0.12 0.12 1
+		drawStringNum %SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 0, -2
+		drawStringNum %SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, -1
+
+		setColor 1 1 1 1
+		endif
+	drawStringNum %SCORE
+
+endif
+endif //if %SCORE != #NOTSET

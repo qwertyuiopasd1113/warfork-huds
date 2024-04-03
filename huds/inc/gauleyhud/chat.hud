@@ -1,0 +1,15 @@
+setFontFamily "Fredoka SemiCondensed"
+
+setAlign 1 1
+setSize 300, 190
+setCursor 0, 360
+setFontSize %VIDHEIGHT / 70
+
+if %CHAT_MODE > 0
+    setColor 0 0 0 1
+endif
+if %CHAT_MODE == 0
+    setColor 0 0 0 0
+endif
+
+drawChat 5, 5, "gfx/gauleyhud/chatbg"

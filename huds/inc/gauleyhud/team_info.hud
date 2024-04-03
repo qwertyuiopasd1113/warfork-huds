@@ -1,0 +1,14 @@
+//
+// Draws team info (locations, status)
+//
+drawTeamMates
+
+setFontFamily "Bebas Neue"
+setfontsize %VIDHEIGHT / 40
+
+setAlign 3 3
+setColor 1 1 1 0.3
+setCursor #WIDTH, 590
+if %SHOW_TEAM_LOCATIONS != 3
+drawTeamInfo
+endif

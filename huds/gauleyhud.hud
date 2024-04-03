@@ -1,0 +1,84 @@
+/*
+Use 'cg_showSpeed 2' in console to disable outlines
+Use 'cg_showTimer 2' in console for alternative timer/score placement
+Use 'cg_showTeamLocations 2' in console to enable team names (or 3, to hide team locations)
+Made by Gauley, inspired by ToxicHUD made by fakeperson
+Fonts from Google Fonts (Bebas Neue, Anton, Fredoka)
+*/
+
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include zoom
+include damage_indicator_screen
+include crosshair
+include damage_numbers
+
+
+if %TUTORIAL == 0
+include gauleyhud/clock
+endif
+
+if %RACE == 0
+include gauleyhud/health
+include gauleyhud/armor
+include gauleyhud/ammo
+include gauleyhud/stunned
+include gauleyhud/ammo_warning
+include gauleyhud/drowning
+include gauleyhud/obituaries
+include gauleyhud/powerups
+include gauleyhud/weaponlist
+include weaponcross
+
+
+if %TUTORIAL == 0
+include gauleyhud/scores
+include gauleyhud/scores_individual
+include gauleyhud/team_info
+include gauleyhud/team_image
+include gauleyhud/team_message
+include gauleyhud/team_progress
+include item_timers
+include minimap
+
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+
+
+include gauleyhud/picked_up_item
+include gauleyhud/fps
+include gauleyhud/speed
+include gauleyhud/chasing
+include gauleyhud/pointing
+include strafe
+include download
+include net
+include help_message
+include gauleyhud/keystate
+include gauleyhud/race_records
+
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include gauleyhud/awards
+include gauleyhud/chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD == 1
+setCursor 0 0
+setAlign 0 0
+setSize 800 600
+setColor 0 0 0 0.2
+drawPicByName *whiteImage
+setAlign 1 3
+setCursor 0, 600
+setFontFamily con_fontSystemMono
+setFontSize %VIDHEIGHT / 70
+
+setColor 1 1 1 1
+drawString "^5GauleyHUD"
+
+endif

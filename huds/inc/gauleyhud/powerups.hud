@@ -1,0 +1,68 @@
+if %RACE == 0
+
+setFontFamily "Bebas Neue"
+setFontSize %VIDHEIGHT / 20
+setCursor #WIDTH / 2, 430
+setAlign 2 2
+setColor 1 1 1 1
+if %POWERUP_QUAD_TIME != 0
+	if %POWERUP_WARSHELL_TIME != 0
+		moveCursor -24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	endif
+	setSize 42 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 42
+	drawPicByItemIndex #ITEM_QUAD
+	setSize 21 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 21
+	if %SHOW_SPEED < 2
+		setColor 0 0 0 1
+		moveCursor 0, 1
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 1, 0
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 0, -1
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 0, -1
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor -1, 0
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor -1, 0
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 0, 1
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 0, 1
+		drawStringNum %POWERUP_QUAD_TIME
+		moveCursor 1, -1
+		setcolor 1 1 1 1
+	endif
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 48 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+endif
+if %POWERUP_WARSHELL_TIME != 0
+	setSize 42 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 42
+	drawPicByItemIndex #ITEM_WARSHELL
+	setSize 21 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 21
+	if %INSTAGIB != 1
+		if %SHOW_SPEED < 2
+			setColor 0 0 0 1
+			moveCursor 0, 1
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 1, 0
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 0, -1
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 0, -1
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor -1, 0
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor -1, 0
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 0, 1
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 0, 1
+			drawStringNum %POWERUP_WARSHELL_TIME
+			moveCursor 1, -1
+			setcolor 1 1 1 1
+		endif
+		drawStringNum %POWERUP_WARSHELL_TIME
+	endif
+endif
+endif

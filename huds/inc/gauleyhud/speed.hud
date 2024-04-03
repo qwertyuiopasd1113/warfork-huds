@@ -1,0 +1,32 @@
+if %TEAM != #TEAM_SPECTATOR
+if %SHOW_SPEED > 0
+
+setfontfamily "Bebas Neue"
+setfontstyle normal
+setfontsize %VIDHEIGHT / 30
+
+setAlign 2 2
+setCursor 400, 360
+
+if %SHOW_SPEED < 2
+    setColor 0 0 0 1
+    drawstringNum %SPEED
+    moveCursor 0, -1
+    drawstringNum %SPEED
+    moveCursor 0, -1
+    drawstringNum %SPEED
+    moveCursor 1, 0
+    drawstringNum %SPEED
+    moveCursor 1, 0
+    drawstringNum %SPEED
+    moveCursor 0, 1
+    drawstringNum %SPEED
+    moveCursor 0, 1
+    drawstringNum %SPEED
+    moveCursor -1, -1
+endif
+
+setColor 1 1 1 1
+drawstringNum %SPEED
+endif
+endif
