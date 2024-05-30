@@ -1,0 +1,66 @@
+setColor 1 1 1 1
+setFontFamily "Verdana"
+setFontStyle Bold
+
+if %SCORE != #NOTSET
+ifnot %TEAMBASED
+	setCursor #WIDTH / 2, 10
+	moveCursor 00 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setAlign 1 1
+	setColor 1 1 1 1
+	setColorAlpha 1
+	setFontSize %VIDHEIGHT / 60
+	if %SHOW_SPEED < 2
+		setColor 0.12 0.16 0.16 1
+		drawString "score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 0, -2
+		drawString "score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, -1
+	endif
+	setColor 1 1 1 1
+	drawString "score:"
+	moveCursor 34 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -3
+	setFontSize %VIDHEIGHT / 40
+setFontFamily "Virtue"
+
+	if %SHOW_SPEED < 2
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 0, -2
+		drawStringNum %SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 0, 1
+		drawStringNum %SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %SCORE
+		moveCursor 0, -1
+
+		setColor 1 1 1 1
+		endif
+	drawStringNum %SCORE
+
+endif
+endif //if %SCORE != #NOTSET

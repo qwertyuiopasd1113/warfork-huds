@@ -1,0 +1,64 @@
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+setFontFamily "Droid Sans"
+setFontSize %VIDHEIGHT / 64
+setAlign 2 2
+setCursor #WIDTH / 2, 340
+
+if %LOW_AMMO > %AMMO
+ifnot %AMMO <= 0
+	if %SHOW_SPEED < 2
+		setColor 0.2 0.12 0.12 1
+		drawString "low ammo"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "low ammo"
+		moveCursor 0, 1
+		drawString "low ammo"
+		moveCursor 0, -2
+		drawString "low ammo"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "low ammo"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "low ammo"
+		moveCursor 0, 1
+		drawString "low ammo"
+		moveCursor 0, 1
+		drawString "low ammo"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "low ammo"
+		moveCursor 0, -1
+		setColor 1 0.6 0.6 1
+	endif
+	drawString "low ammo"
+endif
+endif
+
+if %AMMO <= 0
+	if %SHOW_SPEED < 2
+		setColor 0.2 0.12 0.12 1
+		drawString "no ammo"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "no ammo"
+		moveCursor 0, 1
+		drawString "no ammo"
+		moveCursor 0, -2
+		drawString "no ammo"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "no ammo"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "no ammo"
+		moveCursor 0, 1
+		drawString "no ammo"
+		moveCursor 0, 1
+		drawString "no ammo"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "no ammo"
+		moveCursor 0, -1
+		setColor 1 0.4 0.4 1
+	endif
+	drawString "no ammo"
+endif
+endif
+endif
+endif

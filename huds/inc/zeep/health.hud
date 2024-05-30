@@ -1,0 +1,60 @@
+setCursor #WIDTH / 2, 370
+moveCursor -92 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+setFontFamily "Virtue"
+setFontSize %VIDHEIGHT / 30
+
+if %TEAM != #TEAM_SPECTATOR
+		setAlign 3 1		
+		moveCursor 91 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 21
+		setSize 92 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 7
+		setColor 0 0 0 .3
+		drawPicByName, gfx/ui/white
+		setColor 1 1 1 1
+
+		setSize 90 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
+		moveCursor -91 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		setAlign 1 1
+		if %HEALTH < 40
+			setColor 1 .7 .7 1
+		endif
+        drawPicBar %HEALTH, 100, gfx/ui/white
+		// overheal
+        drawPicBar %HEALTH - 100, 100, gfx/ui/white
+		setAlign 3 1
+
+		moveCursor 87 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
+		setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
+		
+		if %SHOW_SPEED < 2
+			setColor 0.16 0.16 0.16 1
+			if %HEALTH < 40
+				setColor 0.32 0.16 0.16 1
+			endif
+			drawStringNum %HEALTH
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %HEALTH
+			moveCursor 0, 1
+			drawStringNum %HEALTH
+			moveCursor 0, -2
+			drawStringNum %HEALTH
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %HEALTH
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %HEALTH
+			moveCursor 0, 1
+			drawStringNum %HEALTH
+			moveCursor 0, 1
+			drawStringNum %HEALTH
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %HEALTH
+			moveCursor 0, -1
+	
+		endif
+		setColor 1 1 1 1
+		if %HEALTH < 40
+			setColor 1 .7 .7 1
+		endif
+		drawStringNum %HEALTH
+
+endif

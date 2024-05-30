@@ -1,0 +1,30 @@
+if %CHASING != #NOTSET
+	setAlign #MIDDLE #MIDDLE
+	setCursor #WIDTH / 2, 90
+	setFontFamily "Hemi Head"
+	setFontSize %VIDWIDTH / 50 
+
+	if %SHOW_SPEED < 2
+		setColor 0.16 0.16 0.16 1
+		drawCleanPlayerName %CHASING
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 0, -2
+		drawCleanPlayerName %CHASING
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, -1
+	endif
+	setColor 1 1 1 1
+	drawPlayerName %CHASING
+endif

@@ -1,0 +1,11 @@
+// Draws team info (locations, status)
+drawTeamMates
+
+setFontFamily "Virtue"
+setFontSize %VIDHEIGHT / 60
+
+setAlign 3 3
+setColor 1 1 1 0.5
+setCursor #WIDTH, #HEIGHT
+moveCursor 0, -20
+drawTeamInfo
