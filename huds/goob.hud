@@ -1,0 +1,94 @@
+//by gauley
+setFontFamily "Montserrat"
+setFontSize "Montserrat"
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include zoom
+include damage_indicator_screen
+include goob/crosshair
+include damage_numbers
+
+
+if %RACE == 0
+
+include goob/health
+include goob/armor
+
+include goob/ammo
+if %TUTORIAL == 0
+include goob/score_solo
+include goob/scores
+include goob/clock
+endif //if %TUTORIAL == 0
+
+if %SHOW_SPEED > 1 //if using custom xhair
+    ifnot %SHOW_AWARDS == 2 //and if not using crosshair damage 
+        include goob/damage_warning
+    endif
+endif
+ifnot %SHOW_SPEED > 1 //if using default xhair
+    include goob/damage_warning
+endif
+
+include goob/ammo_warning
+include goob/stunned
+include goob/obituaries
+
+ifnot %SHOW_FPS == 2 //for warsow
+    include goob/drowning
+endif
+
+include goob/powerups
+include goob/picked_up_item 
+
+if %TUTORIAL == 0
+include goob/team_info
+include goob/team_image
+include goob/team_message
+include goob/team_progress
+include goob/minimap
+include item_timers 
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+
+
+include goob/weaponlist
+include goob/race_records
+include strafe
+include goob/fps
+include help_message
+include goob/chasing
+include download
+include default/net
+include goob/pointing
+
+ifnot %TEAM == #TEAM_SPECTATOR
+
+if %SHOW_PRESSED_KEYS == 2
+    if %CHASING > 0 //cg_showPressedKeys 2 will show only if watching
+        include goob/keystate
+    endif
+endif
+ifnot %SHOW_PRESSED_KEYS == 2
+    include goob/keystate
+endif
+
+include goob/speed
+endif
+
+include weaponcross
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include goob/awards
+include goob/chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD
+setCursor 0 0
+setAlign 0 0
+setSize #WIDTH #HEIGHT
+setColor 0 0 0 0.1
+drawPicByName *whiteImage
+endif
