@@ -1,0 +1,29 @@
+ifnot %SHOW_POINTED_PLAYER > 1
+	setAlign #MIDDLE #MIDDLE
+	setCursor #WIDTH / 2, 90
+	setFontFamily "Hemi Head"
+	setFontSize %VIDWIDTH / 50 
+
+		setColor 0.08 0.08 0.08 1
+		drawCleanPlayerName %CHASING
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 0, -2
+		drawCleanPlayerName %CHASING
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 0, 1
+		drawCleanPlayerName %CHASING
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawCleanPlayerName %CHASING
+		moveCursor 0, -1
+
+	setColor 1 1 1 1
+	drawPlayerName %CHASING
+endif

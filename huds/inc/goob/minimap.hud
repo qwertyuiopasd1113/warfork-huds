@@ -1,0 +1,12 @@
+setAlign 1 1
+setCursor 0 200
+setColor 0.5 0.5 0.5 0.5
+ifnot %SCOREBOARD
+	setSize 150 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 150
+	drawMiniMap 0 1
+endif
+if %SCOREBOARD
+	setColor .5 .5 .5 1
+	setSize 300 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 300
+	drawMiniMap 1 1
+endif

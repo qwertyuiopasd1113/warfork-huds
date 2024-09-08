@@ -1,0 +1,15 @@
+setFontFamily "Montserrat"
+setFontStyle "bold"
+setFontSize %VIDHEIGHT / 30
+setColor 0 0 0 1
+setCursor #WIDTH / 2, 190
+setAlign 2 3
+if %SCOREBOARD
+	moveCursor 0, -65
+endif 
+
+setColor 1 1 1 1
+drawAwards
+
+
+

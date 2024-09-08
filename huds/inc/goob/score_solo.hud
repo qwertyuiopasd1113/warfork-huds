@@ -1,0 +1,65 @@
+setColor 1 1 1 1
+setFontFamily "Montserrat"
+setFontStyle Bold
+
+if %SCORE != #NOTSET
+ifnot %TEAMBASED
+	setCursor #WIDTH / 2, 30
+	moveCursor -24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setAlign 2 1
+	setColor 1 1 1 1
+	setColorAlpha 1
+	setFontSize %VIDHEIGHT / 60
+
+		setColor 0.12 0.08 0.08 1
+		drawString "score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 0, -2
+		drawString "score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 0, 1
+		drawString "score:"
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "score:"
+		moveCursor 0, -1
+
+	setColor 1 1 1 1
+	drawString "score:"
+	moveCursor 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -3
+	setFontSize %VIDHEIGHT / 40
+	setFontFamily "Reddit Mono"
+
+	setColor 0.12 0.08 0.08 1
+	drawStringNum %SCORE
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SCORE
+	moveCursor 0, 1
+	drawStringNum %SCORE
+	moveCursor 0, -2
+	drawStringNum %SCORE
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SCORE
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SCORE
+	moveCursor 0, 1
+	drawStringNum %SCORE
+	moveCursor 0, 1
+	drawStringNum %SCORE
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SCORE
+	moveCursor 0, -1
+
+	setColor 1 1 1 1
+	
+	drawStringNum %SCORE
+
+endif
+endif //if %SCORE != #NOTSET

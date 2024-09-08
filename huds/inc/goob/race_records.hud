@@ -1,0 +1,108 @@
+if %RACE
+    setCursor #WIDTH / 2, 470
+    moveCursor -100 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+    setAlign #CENTER, #MIDDLE
+    setFontFamily "Virtue"
+	setFontSize %VIDHEIGHT / 60
+
+    if %TIME_SELF == #NOTSET
+        setColor 0.08 0.08 0.08 1
+        drawTimer %TIME_BEST
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_BEST
+        moveCursor 0, 1
+        drawTimer %TIME_BEST
+        moveCursor 0, -2
+        drawTimer %TIME_BEST
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_BEST
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_BEST
+        moveCursor 0, 1
+        drawTimer %TIME_BEST
+        moveCursor 0, 1
+        drawTimer %TIME_BEST
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_BEST
+        moveCursor 0, -1
+        setColor 0 1 1 1
+        drawTimer %TIME_BEST
+        moveCursor 0 -20
+
+        setFontFamily "Montserrat"
+        setColor 0.08 0.08 0.08 1
+        drawString "personal best"
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "personal best"
+        moveCursor 0, 1
+        drawString "personal best"
+        moveCursor 0, -2
+        drawString "personal best"
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "personal best"
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "personal best"
+        moveCursor 0, 1
+        drawString "personal best"
+        moveCursor 0, 1
+        drawString "personal best"
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "personal best"
+        moveCursor 0, -1
+        
+        setColor 0.2 0.8 0.8 1
+        drawString "personal best"
+        setFontFamily "Virtue"
+        setCursor #WIDTH / 2, 470
+        moveCursor 100 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+        setColor 0.08 0.08 0.08 1
+        drawTimer %TIME_RECORD
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_RECORD
+        moveCursor 0, 1
+        drawTimer %TIME_RECORD
+        moveCursor 0, -2
+        drawTimer %TIME_RECORD
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_RECORD
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_RECORD
+        moveCursor 0, 1
+        drawTimer %TIME_RECORD
+        moveCursor 0, 1
+        drawTimer %TIME_RECORD
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawTimer %TIME_RECORD
+        moveCursor 0, -1
+        setColor 1 .7 .3 1
+
+        drawTimer %TIME_RECORD
+        moveCursor 0 -20
+        setFontFamily "Montserrat"
+
+        setColor 0.08 0.08 0.08 1
+        drawString "server record"
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "server record"
+        moveCursor 0, 1
+        drawString "server record"
+        moveCursor 0, -2
+        drawString "server record"
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "server record"
+        moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "server record"
+        moveCursor 0, 1
+        drawString "server record"
+        moveCursor 0, 1
+        drawString "server record"
+        moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+        drawString "server record"
+        moveCursor 0, -1
+        
+        setColor .7 .5 .1 1
+        drawString "server record"
+    endif
+
+endif // %RACE

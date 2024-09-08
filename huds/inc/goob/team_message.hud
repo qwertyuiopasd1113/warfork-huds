@@ -1,0 +1,91 @@
+//shows value of alive players
+
+setFontSize %VIDHEIGHT / 25
+setFontFamily "Reddit Mono"
+
+if %TEAMBASED
+if %MESSAGE_ALPHA
+if %MESSAGE_BETA
+	setCursor #WIDTH / 2, 500
+	setAlign 2 2
+
+	
+	setAlign 3 2
+	moveCursor -10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColor 0.12 0.12 0.12 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -2
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	setColorToTeamColor #TEAM_ALPHA
+	drawStatString %MESSAGE_ALPHA
+
+	setCursor #WIDTH / 2, 500
+	setAlign 1 2
+	moveCursor 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColor 0.12 0.12 0.12 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -2
+	drawStatString %MESSAGE_BETA
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	
+	setColorToTeamColor #TEAM_BETA
+	drawStatString %MESSAGE_BETA
+
+	setCursor #WIDTH / 2, 500
+	moveCursor 0, 3
+	setAlign 2 2
+	setFontFamily "Silhouette"
+	setFontSize %VIDHEIGHT / 20
+	setColor 0.12 0.12 0.12 1
+	drawString "?"
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "?"
+	moveCursor 0, 1
+	drawString "?"
+	moveCursor 0, -2
+	drawString "?"
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "?"
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "?"
+	moveCursor 0, 1
+	drawString "?"
+	moveCursor 0, 1
+	drawString "?"
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "?"
+	moveCursor 0, -1
+	setColor 1 1 1 1
+	drawString "?"
+endif
+endif
+endif

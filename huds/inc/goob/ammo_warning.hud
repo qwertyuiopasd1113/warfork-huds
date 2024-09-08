@@ -1,0 +1,107 @@
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+setFontFamily "Montserrat"
+setFontSize %VIDHEIGHT / 64
+setAlign 3 2
+setCursor #WIDTH / 2, 350
+setFontStyle bold
+
+if %LOW_AMMO > %AMMO
+ifnot %AMMO <= 0
+	setColor 0.2 0.12 0.12 1
+	drawString "low ammo: "
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "low ammo: "
+	moveCursor 0, 1
+	drawString "low ammo: "
+	moveCursor 0, -2
+	drawString "low ammo: "
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "low ammo: "
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "low ammo: "
+	moveCursor 0, 1
+	drawString "low ammo: "
+	moveCursor 0, 1
+	drawString "low ammo: "
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "low ammo: "
+	moveCursor 0, -1
+	setColor 1 0.6 0.6 1
+	drawString "low ammo: "
+	setAlign 1 2
+
+	setColor 0.2 0.12 0.12 1
+	drawStringNum %AMMO
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 0, -2
+	drawStringNum %AMMO
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, -1
+	setColor 1 0.6 0.6 1
+	drawStringNum %AMMO
+endif
+endif
+
+if %AMMO <= 0
+	setColor 0.2 0.12 0.12 1
+	drawString "no ammo: "
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "no ammo: "
+	moveCursor 0, 1
+	drawString "no ammo: "
+	moveCursor 0, -2
+	drawString "no ammo: "
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "no ammo: "
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "no ammo: "
+	moveCursor 0, 1
+	drawString "no ammo: "
+	moveCursor 0, 1
+	drawString "no ammo: "
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "no ammo: "
+	moveCursor 0, -1
+	setColor 1 0.4 0.4 1
+	drawString "no ammo: "
+
+	setAlign 1 2
+	setColor 0.2 0.12 0.12 1
+	drawStringNum %AMMO
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 0, -2
+	drawStringNum %AMMO
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 0, 1
+	drawStringNum %AMMO
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %AMMO
+	moveCursor 0, -1
+	setColor 1 0.4 0.4 1
+	drawStringNum %AMMO
+endif
+endif
+endif
+endif

@@ -1,0 +1,5 @@
+setFontFamily "Montserrat"
+setFontSize %VIDHEIGHT / 48
+setFontStyle italic
+setColor 1 1 1 1
+drawPointing
