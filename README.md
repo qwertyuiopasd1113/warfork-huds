@@ -1,5 +1,6 @@
 # warfork-huds
 huds i made for warfork  
+to use them (not goob) in warsow go into the pk3 and delete drowning.hud
   
 # goob
 `cg_showFPS 2` to use in warsow  
