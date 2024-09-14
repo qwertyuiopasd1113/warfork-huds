@@ -5,6 +5,7 @@ to use them (not goob) in warsow go into the pk3 and delete drowning.hud
 # goob
 `cg_showFPS 2` to use in warsow  
 `cg_showPressedKeys 2` to only show keystate while chasing  
+`cg_showSpeed 2-9` to use custom crosshairs, `cg_showSpeed 1` for default  
 no screenshots as i havent bothered  
   
 # zeep
