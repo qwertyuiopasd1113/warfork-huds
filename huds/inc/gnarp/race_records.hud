@@ -25,7 +25,7 @@ if %RACE
         setColor 0 1 1 1
         drawTimer %TIME_BEST
         moveCursor 0 -20
-        setFontFamily "Montserrat"
+        setFontFamily "Virtue"
         if %SHOW_SPEED < 2
             setColor 0 0 0 1
             drawString "Personal Best"
@@ -67,7 +67,7 @@ if %RACE
         setColor .96 .76 .24 1
         drawTimer %TIME_RECORD
         moveCursor 0 -20
-        setFontFamily "Montserrat"
+        setFontFamily "Virtue"
         if %SHOW_SPEED < 2
             setColor 0 0 0 1
             drawString "Server Record"

@@ -1,5 +1,5 @@
 /*
-Use 'cg_showSpeed 2' in console to disable outlines
+Use 'cg_showSpeed 2' in console to show damage needed to die
 Made by Gauley
 */
 setFontFamily con_fontSystem
@@ -8,22 +8,29 @@ setFontSize con_fontSystemSmall
 setScale #DEFAULTSCALE
 if %MATCH_STATE < #MATCH_STATE_POSTMATCH
 
-include zoom
+include zeep/zoom
 include damage_indicator_screen
-include crosshair
+include zeep/crosshair
 include damage_numbers
 
-if %RACE == 0
-include zeep/health
-include zeep/armor
-include zeep/ammo
 
+if %RACE == 0
+if %SHOW_SPEED <= 1
+    include zeep/health
+    include zeep/armor
+endif
+if %SHOW_SPEED >= 2
+    include zeep/effective_hp
+endif
+
+include zeep/ammo
 if %TUTORIAL == 0
 include zeep/score_solo
 include zeep/scores
 include zeep/clock
 endif //if %TUTORIAL == 0
 
+include zeep/damage_warning
 include zeep/ammo_warning
 include zeep/stunned
 include zeep/obituaries
@@ -61,8 +68,10 @@ endif
 include weaponcross
 endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
 
-include zeep/awards 
-include zeep/chat
+include zeep/awards
+if %SHOW_AWARDS != 2 
+    include zeep/chat
+endif
 
 //adds transparent dark background if scoreboard is shown
 if %SCOREBOARD

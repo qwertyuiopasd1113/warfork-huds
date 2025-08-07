@@ -1,0 +1,11 @@
+drawTeamMates
+
+setFontFamily "Droid Sans"
+setFontStyle Normal
+setFontSize %VIDHEIGHT / 64
+
+setAlign 3 3
+setColor 1 1 1 0.7
+setCursor #WIDTH, #HEIGHT
+moveCursor -5 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -20
+drawTeamInfo

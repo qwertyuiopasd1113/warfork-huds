@@ -1,0 +1,28 @@
+setSize 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 40
+
+setrotationspeed 0 1 0
+
+if %HEALTH > 100
+    drawmodelbyname "models/items/health/mega/mega_health.md3" "models/items/health/mega/torus"
+endif
+if %HEALTH == 100
+    drawmodelbyname "models/items/health/large/large_health.md3" "models/items/health/large/torus"
+endif
+if %HEALTH < 100
+    if %HEALTH >= 75
+    drawmodelbyname "models/items/health/large/large_health.md3" "models/items/health/large/torus"
+    endif
+endif
+if %HEALTH < 75
+    if %HEALTH >= 50
+    drawmodelbyname "models/items/health/large/large_health.md3" "models/items/health/large/torus"
+    endif
+endif
+if %HEALTH < 50
+    if %HEALTH >= 25
+    drawmodelbyname "models/items/health/medium/medium_health.md3" "models/items/health/medium/torus"
+    endif
+endif
+if %HEALTH < 25
+    drawmodelbyname "models/items/health/small/small_health.md3" "models/items/health/small/torus"
+endif

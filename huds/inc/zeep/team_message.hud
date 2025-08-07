@@ -24,27 +24,26 @@ setAlign 3 2
 
 if %TEAM == #TEAM_ALPHA
 	if %MESSAGE_ALPHA
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, -2
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, -2
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, -1
+			
 			setColorToTeamColor #TEAM_ALPHA
 			drawStringRepeatConfigString "." %MESSAGE_ALPHA
 	endif
@@ -52,27 +51,27 @@ if %TEAM == #TEAM_ALPHA
 	moveCursor 0, 8
 
 	if %MESSAGE_BETA
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 0, -2
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_BETA
-				moveCursor 0, -1
-			endif
+	
+			setColor 0.16 0.16 0.16 1
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 0, -2
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_BETA
+			moveCursor 0, -1
+				
 			setColorToTeamColor #TEAM_BETA
 			drawStringRepeatConfigString "." %MESSAGE_BETA
 
@@ -81,7 +80,6 @@ endif
 
 if %TEAM == #TEAM_BETA
 	if %MESSAGE_BETA
-			if %SHOW_SPEED < 2
 				setColor 0.16 0.16 0.16 1
 				drawStringRepeatConfigString "." %MESSAGE_BETA
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -101,7 +99,6 @@ if %TEAM == #TEAM_BETA
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 				drawStringRepeatConfigString "." %MESSAGE_BETA
 				moveCursor 0, -1
-			endif
 			setColorToTeamColor #TEAM_BETA
 			drawStringRepeatConfigString "." %MESSAGE_BETA
 
@@ -109,27 +106,25 @@ if %TEAM == #TEAM_BETA
 
 
 	if %MESSAGE_ALPHA
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, -2
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, 1
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawStringRepeatConfigString "." %MESSAGE_ALPHA
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, -2
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, 1
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringRepeatConfigString "." %MESSAGE_ALPHA
+			moveCursor 0, -1
 			setColorToTeamColor #TEAM_ALPHA
 			drawStringRepeatConfigString "." %MESSAGE_ALPHA
 
@@ -145,7 +140,6 @@ setSpecialFontFamily "Silhouette"
 
 
 	if %MESSAGE_ALPHA
-			if %SHOW_SPEED < 2
 				setColor 0.16 0.16 0.16 1
 				drawStringRepeatConfigString "." %MESSAGE_ALPHA
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -165,7 +159,6 @@ setSpecialFontFamily "Silhouette"
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 				drawStringRepeatConfigString "." %MESSAGE_ALPHA
 				moveCursor 0, -1
-			endif
 			setColorToTeamColor #TEAM_ALPHA
 			drawStringRepeatConfigString "." %MESSAGE_ALPHA
 
@@ -175,7 +168,6 @@ setSpecialFontFamily "Silhouette"
 	moveCursor 100 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 
 	if %MESSAGE_BETA
-			if %SHOW_SPEED < 2
 				setColor 0.16 0.16 0.16 1
 				drawStringRepeatConfigString "." %MESSAGE_BETA
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -195,7 +187,6 @@ setSpecialFontFamily "Silhouette"
 				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 				drawStringRepeatConfigString "." %MESSAGE_BETA
 				moveCursor 0, -1
-			endif
 			setColorToTeamColor #TEAM_BETA
 			drawStringRepeatConfigString "." %MESSAGE_BETA
 

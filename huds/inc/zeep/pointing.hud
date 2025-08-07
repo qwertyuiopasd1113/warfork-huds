@@ -1,4 +1,5 @@
-setFontFamily "Droid Sans"
+setFontFamily con_fontSystem
 setFontSize %VIDHEIGHT / 48
-setColor 1 1 1 0.8
+setFontStyle bold
+setColor 1 1 1 1
 drawPointing

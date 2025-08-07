@@ -14,6 +14,7 @@ if %SHOW_SPEED == 1
     drawCrosshair
 endif
 
+if %HEALTH >= 1
 if %SHOW_SPEED == 2
     drawPicByName "gfx/goobhud/xhair/xh1"
 endif
@@ -41,3 +42,9 @@ endif
 if %SHOW_SPEED == 10
     drawPicByName "gfx/goobhud/xhair/xh9"
 endif
+if %SHOW_SPEED == 11
+    drawPicByName "gfx/goobhud/xhair/xh10"
+endif
+
+endif
+

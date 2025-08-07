@@ -20,37 +20,42 @@ if %TEAM != #TEAM_SPECTATOR
 		endif
         drawPicBar %HEALTH, 100, gfx/ui/white
 		// overheal
+        setColor 1 .75 0 1
         drawPicBar %HEALTH - 100, 100, gfx/ui/white
+        setColor 1 .5 0 1
+        drawPicBar %HEALTH - 200, 100, gfx/ui/white
+        setColor 1 .25 0 1
+        drawPicBar %HEALTH - 300, 100, gfx/ui/white
+        setColor 1 0 0 1
+        drawPicBar %HEALTH - 400, 100, gfx/ui/white
 		setAlign 3 1
 
 		moveCursor 87 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
 		setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
-		
-		if %SHOW_SPEED < 2
-			setColor 0.16 0.16 0.16 1
-			if %HEALTH < 40
-				setColor 0.32 0.16 0.16 1
-			endif
-			drawStringNum %HEALTH
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %HEALTH
-			moveCursor 0, 1
-			drawStringNum %HEALTH
-			moveCursor 0, -2
-			drawStringNum %HEALTH
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %HEALTH
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %HEALTH
-			moveCursor 0, 1
-			drawStringNum %HEALTH
-			moveCursor 0, 1
-			drawStringNum %HEALTH
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %HEALTH
-			moveCursor 0, -1
 	
+		setColor 0.16 0.16 0.16 1
+		if %HEALTH < 40
+			setColor 0.32 0.16 0.16 1
 		endif
+		drawStringNum %HEALTH
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 0, -2
+		drawStringNum %HEALTH
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, -1
+
 		setColor 1 1 1 1
 		if %HEALTH < 40
 			setColor 1 .7 .7 1

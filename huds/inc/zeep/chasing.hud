@@ -1,10 +1,9 @@
-if %CHASING != #NOTSET
+ifnot %SHOW_POINTED_PLAYER > 1
 	setAlign #MIDDLE #MIDDLE
 	setCursor #WIDTH / 2, 90
 	setFontFamily "Hemi Head"
 	setFontSize %VIDWIDTH / 50 
 
-	if %SHOW_SPEED < 2
 		setColor 0.16 0.16 0.16 1
 		drawCleanPlayerName %CHASING
 		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -24,7 +23,7 @@ if %CHASING != #NOTSET
 		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 		drawCleanPlayerName %CHASING
 		moveCursor 0, -1
-	endif
+
 	setColor 1 1 1 1
 	drawPlayerName %CHASING
 endif

@@ -25,7 +25,6 @@ setfontsize %VIDHEIGHT / 50
 
 		// Number
 		moveCursor -12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -15
-		if %SHOW_SPEED < 2
 			setColor 0.12 0.16 0.16 1
 			drawStringNum %PROGRESS_SELF
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -45,7 +44,6 @@ setfontsize %VIDHEIGHT / 50
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 			drawStringNum %PROGRESS_SELF
 			moveCursor 0, -1
-		endif
 		if %PROGRESS_SELF < 0
 			setColor 1 0 0 0.9
 		endif
@@ -78,7 +76,6 @@ setfontsize %VIDHEIGHT / 50
 
 		// Number
 		moveCursor 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -15
-		if %SHOW_SPEED < 2
 			setColor 0.12 0.16 0.16 1
 			drawStringNum %PROGRESS_OTHER
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -98,7 +95,6 @@ setfontsize %VIDHEIGHT / 50
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
 			drawStringNum %PROGRESS_OTHER
 			moveCursor 0, -1
-		endif
 		if %PROGRESS_OTHER < 0
 			setColor 1 0 0 0.9
 		endif
@@ -133,7 +129,6 @@ if %PROGRESS_SELF
 		
 		moveCursor 0, 5
 
-		if %SHOW_SPEED < 2
 			setColor 0.16 0.16 0.16 1
 			drawStringNum %PROGRESS_SELF
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -154,7 +149,6 @@ if %PROGRESS_SELF
 			drawStringNum %PROGRESS_SELF
 			moveCursor 0, -1
 	
-		endif
 		if %PROGRESS_SELF > 0
 			setColor 0.5 1 0.6 1
 		endif
@@ -186,7 +180,6 @@ if %PROGRESS_OTHER
 		endif
 		moveCursor 0, 5
 
-		if %SHOW_SPEED < 2
 			setColor 0.16 0.16 0.16 1
 			drawStringNum %PROGRESS_OTHER
 			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
@@ -207,7 +200,6 @@ if %PROGRESS_OTHER
 			drawStringNum %PROGRESS_OTHER
 			moveCursor 0, -1
 	
-		endif
 		if %PROGRESS_OTHER > 0
 			setColor 0.5 1 0.6 1
 		endif

@@ -16,29 +16,27 @@ if %RACE == 0
 			//ammo number
 			if %AMMO
 			ifnot %INSTAGIB
-			moveCursor 30 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				if %SHOW_SPEED < 2
-					setColor 0.16 0.16 0.16 1
-					drawStringNum %AMMO
-					moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-					drawStringNum %AMMO
-					moveCursor 0, 1
-					drawStringNum %AMMO
-					moveCursor 0, -2
-					drawStringNum %AMMO
-					moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-					drawStringNum %AMMO
-					moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-					drawStringNum %AMMO
-					moveCursor 0, 1
-					drawStringNum %AMMO
-					moveCursor 0, 1
-					drawStringNum %AMMO
-					moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-					drawStringNum %AMMO
-					moveCursor 0, -1
-					setColor 1 1 1 1
-				endif
+				moveCursor 30 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				setColor 0.16 0.16 0.16 1
+				drawStringNum %AMMO
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %AMMO
+				moveCursor 0, 1
+				drawStringNum %AMMO
+				moveCursor 0, -2
+				drawStringNum %AMMO
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %AMMO
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %AMMO
+				moveCursor 0, 1
+				drawStringNum %AMMO
+				moveCursor 0, 1
+				drawStringNum %AMMO
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %AMMO
+				moveCursor 0, -1
+				setColor 1 1 1 1
 				drawStringNum %AMMO
 			endif
 			endif

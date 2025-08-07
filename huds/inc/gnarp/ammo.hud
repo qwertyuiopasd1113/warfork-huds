@@ -1,25 +1,14 @@
 if %RACE == 0
-	setCursor #WIDTH / 2, 425
+	setCursor #WIDTH / 2, 420
 	setFontSize %VIDHEIGHT / 25
 
 if %WEAPON_ITEM
 	setSize 36 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 36
 	setAlign 2 2
-	if %WEAPON_ITEM != #WEAP_GUNBLADE
-	if %AMMO
-		moveCursor -15 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-	endif
-	endif
 
 	drawWeaponIcon
-	if %WEAPON_ITEM != #WEAP_GUNBLADE
-	if %AMMO
-		moveCursor 30 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-	endif
-	endif
-endif
+	moveCursor 0, 10
     //ammo number
-	ifnot %INSTAGIB
 	if %WEAPON_ITEM != #WEAP_GUNBLADE
 	if %AMMO
 		if %SHOW_SPEED < 2
@@ -47,6 +36,5 @@ endif
 		drawStringNum %AMMO
 	endif
 	endif
-	endif
-
+endif
 endif

@@ -1,0 +1,17 @@
+setFontFamily "Droid Sans Mono"
+setFontStyle bold
+setFontSize %VIDHEIGHT / 90
+
+setAlign 1 1
+setSize 300 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 200
+setCursor 0 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+if %CHAT_MODE > 0
+	setColor 0 0 0 0.1
+endif
+if %CHAT_MODE == 0
+	setColor 0 0 0 0
+endif
+
+
+drawChat 5 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5, "gfx/colors/white"

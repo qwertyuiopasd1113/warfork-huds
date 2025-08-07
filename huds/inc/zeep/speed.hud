@@ -9,27 +9,25 @@ if %SHOW_SPEED
 		setCursor #WIDTH / 2, 342
 	endif
 
-	if %SHOW_SPEED < 2
-		setColor 0.16 0.16 0.16 1
-		drawStringNum %SPEED
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %SPEED
-		moveCursor 0, 1
-		drawStringNum %SPEED
-		moveCursor 0, -2
-		drawStringNum %SPEED
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %SPEED
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %SPEED
-		moveCursor 0, 1
-		drawStringNum %SPEED
-		moveCursor 0, 1
-		drawStringNum %SPEED
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %SPEED
-		moveCursor 0, -1
-	endif
+	setColor 0.16 0.16 0.16 1
+	drawStringNum %SPEED
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SPEED
+	moveCursor 0, 1
+	drawStringNum %SPEED
+	moveCursor 0, -2
+	drawStringNum %SPEED
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SPEED
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SPEED
+	moveCursor 0, 1
+	drawStringNum %SPEED
+	moveCursor 0, 1
+	drawStringNum %SPEED
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %SPEED
+	moveCursor 0, -1
 
 	setColor 1 1 1 1
 	drawStringNum %SPEED

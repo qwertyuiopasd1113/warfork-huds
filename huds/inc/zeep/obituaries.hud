@@ -2,6 +2,6 @@ setAlign 3 1
 setCursor #WIDTH - 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
 setSize 300 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 340
 setFontSize %VIDHEIGHT / 60 
-setFontFamily "Droid Sans"
+setFontFamily con_fontSystem
 setFontStyle bold
 drawObituaries 3 16

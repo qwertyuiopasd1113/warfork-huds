@@ -1,0 +1,44 @@
+setAlign 2 1
+setFontFamily "Hemi Head"
+setFontSize %VIDHEIGHT / 30
+setCursor #WIDTH / 2, #HEIGHT - 95
+moveCursor 120 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+setSize 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 40
+
+if %HEALTH > 0
+if %TEAM != #TEAM_SPECTATOR
+if %INSTAGIB == 0
+
+	include newhud/set/armor_color
+
+	drawNum %ARMOR
+
+	moveCursor 0, -20
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	setColor 0 0 0 1
+	drawString "ARMOR"
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	include newhud/set/armor_color
+	drawString "ARMOR"
+
+	moveCursor -80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 20
+
+	ifnot 0 != %SHOW_AWARDS & 2
+		include newhud/set/armor_icon
+	endif
+	if 0 != %SHOW_AWARDS & 2
+		include newhud/set/armor_model
+	endif
+
+	
+endif
+if %INSTAGIB == 1
+	if %ARMOR > 0
+		setColor 0 0.6 1 1
+		drawNum %ARMOR
+	endif
+endif
+
+endif
+endif
+

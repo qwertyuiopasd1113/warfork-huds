@@ -13,80 +13,81 @@ if %TEAM_BETA_SCORE != #NOTSET
 	setAlign 3 1
 	
 	if %TEAM == #TEAM_ALPHA
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -1
-		endif
+
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor #TEAM_ALPHA
 		drawStringNum %TEAM_ALPHA_SCORE
 	endif
 
 
 	if %TEAM == #TEAM_BETA
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -1
-		endif
+
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor %TEAM
 		drawStringNum %TEAM_BETA_SCORE
 	endif
 
 	if %TEAM == #TEAM_SPECTATOR
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -1
-		endif
+
+
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor #TEAM_ALPHA
 		drawStringNum %TEAM_ALPHA_SCORE
 	endif
@@ -96,79 +97,77 @@ if %TEAM_BETA_SCORE != #NOTSET
 
 	setAlign 1 1
 	if %TEAM == #TEAM_BETA
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_ALPHA_SCORE
-			moveCursor 0, -1
-		endif
+
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_ALPHA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor %TEAM_ENEMY
 		drawStringNum %TEAM_ALPHA_SCORE
 	endif
 
 	if %TEAM == #TEAM_ALPHA
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -1
-		endif
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor %TEAM_ENEMY
 		drawStringNum %TEAM_BETA_SCORE
 	endif
 
 	if %TEAM == #TEAM_SPECTATOR
-		if %SHOW_SPEED < 2
-			setColor 0.12 0.16 0.16 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -2
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, 1
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %TEAM_BETA_SCORE
-			moveCursor 0, -1
-		endif
+		setColor 0.12 0.16 0.16 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -2
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, 1
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %TEAM_BETA_SCORE
+		moveCursor 0, -1
+
 		setColorToTeamColor #TEAM_BETA
 		drawStringNum %TEAM_BETA_SCORE
 	endif
@@ -181,53 +180,49 @@ if %TEAM_BETA_SCORE != #NOTSET
 
 	if %TEAM == #TEAM_ALPHA
 		if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, -2
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, -2
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, -1
 			setColorToTeamColor %TEAM_ENEMY
 			drawString "\<"
 		endif
 
 		if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, -2
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, -2
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, -1
 			setColorToTeamColor %TEAM
 			drawString "\>"
 		endif
@@ -235,53 +230,49 @@ if %TEAM_BETA_SCORE != #NOTSET
 
 	if %TEAM == #TEAM_BETA
 		if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, -2
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, -2
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, -1
 			setColorToTeamColor %TEAM_ENEMY
 			drawString "\<"
 		endif
 
 		if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, -2
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, -2
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, -1
 			setColorToTeamColor %TEAM
 			drawString "\>"
 		endif
@@ -289,80 +280,74 @@ if %TEAM_BETA_SCORE != #NOTSET
 
 	if %TEAM == #TEAM_SPECTATOR
 		if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, -2
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 0, 1
-				drawString "\<"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\<"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, -2
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 0, 1
+			drawString "\<"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\<"
+			moveCursor 0, -1
 			setColorToTeamColor #TEAM_BETA
 			drawString "\<"
 		endif
 
 		if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
-			if %SHOW_SPEED < 2
-				setColor 0.16 0.16 0.16 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, -2
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 0, 1
-				drawString "\>"
-				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-				drawString "\>"
-				moveCursor 0, -1
-			endif
+			setColor 0.16 0.16 0.16 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, -2
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 0, 1
+			drawString "\>"
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawString "\>"
+			moveCursor 0, -1
 			setColorToTeamColor #TEAM_ALPHA
 			drawString "\>"
 		endif
 	endif
 
 	if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
-		if %SHOW_SPEED < 2
-			setColor 0.16 0.16 0.16 1
-			drawString "\="
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawString "\="
-			moveCursor 0, 1
-			drawString "\="
-			moveCursor 0, -2
-			drawString "\="
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawString "\="
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawString "\="
-			moveCursor 0, 1
-			drawString "\="
-			moveCursor 0, 1
-			drawString "\="
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawString "\="
-			moveCursor 0, -1
-		endif
+		setColor 0.16 0.16 0.16 1
+		drawString "\="
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "\="
+		moveCursor 0, 1
+		drawString "\="
+		moveCursor 0, -2
+		drawString "\="
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "\="
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "\="
+		moveCursor 0, 1
+		drawString "\="
+		moveCursor 0, 1
+		drawString "\="
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawString "\="
+		moveCursor 0, -1
 		setColor 1 1 1 1
 		drawString "\="
 	endif

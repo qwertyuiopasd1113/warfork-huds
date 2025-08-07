@@ -1,0 +1,25 @@
+setSize 40 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 40
+if %HEALTH > 100
+	drawPicByItemIndex #ITEM_MEGA_HEALTH
+endif
+if %HEALTH == 100
+	drawPicByItemIndex #ITEM_50_HEALTH
+endif
+if %HEALTH < 100
+	if %HEALTH >= 75
+		drawPicByItemIndex #ITEM_50_HEALTH
+	endif
+endif
+if %HEALTH < 75
+	if %HEALTH >= 50
+		drawPicByItemIndex #ITEM_50_HEALTH
+	endif
+endif
+if %HEALTH < 50
+	if %HEALTH >= 25
+		drawPicByItemIndex #ITEM_25_HEALTH
+	endif
+endif
+if %HEALTH < 25
+	drawPicByItemIndex #ITEM_25_HEALTH
+endif

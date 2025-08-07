@@ -1,0 +1,22 @@
+setSize 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 40
+
+
+if %ARMOR < 50
+    drawPicByItemIndex #ITEM_ARMOR_SHARD
+endif
+
+if %ARMOR >= 50
+    if %ARMOR < 100
+        drawPicByItemIndex #ITEM_GREEN_ARMOR
+    endif
+endif
+
+if %ARMOR >= 100
+    if %ARMOR < 125
+        drawPicByItemIndex #ITEM_YELLOW_ARMOR
+    endif
+endif
+
+if %ARMOR >= 125
+    drawPicByItemIndex #ITEM_RED_ARMOR
+endif

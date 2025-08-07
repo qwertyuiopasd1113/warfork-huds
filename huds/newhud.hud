@@ -1,0 +1,93 @@
+//by algo
+setFontFamily con_fontSystem
+setFontSize con_fontSystemSmall
+
+setScale #DEFAULTSCALE
+if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+include zoom
+include damage_indicator_screen
+include newhud/crosshair
+include damage_numbers
+
+if %RACE == 0
+
+include newhud/health
+include newhud/armor
+
+
+if %TUTORIAL == 0
+include newhud/score_solo
+include newhud/scores
+include newhud/clock
+endif //if %TUTORIAL == 0
+
+include newhud/ammo_warning
+include newhud/stunned
+include newhud/obituaries
+
+include newhud/powerups
+include newhud/picked_up_item
+
+if %TUTORIAL == 0
+include newhud/team_info
+include newhud/team_image
+include newhud/team_message
+include newhud/team_progress
+include newhud/minimap
+include item_timers 
+endif //if %TUTORIAL == 0
+endif //if %RACE == 0
+
+
+include newhud/weaponlist
+include newhud/race_records
+include strafe
+include newhud/fps
+include help_message
+include newhud/chasing
+include download
+include default/net
+include pointing
+ifnot %TEAM == #TEAM_SPECTATOR
+
+if %SHOW_PRESSED_KEYS == 2
+    if %CHASING //cg_showPressedKeys 2 will show only if watching
+        include newhud/keystate
+    endif
+endif
+
+ifnot %SHOW_PRESSED_KEYS == 2
+    include newhud/keystate
+endif
+
+include newhud/speed
+
+include weaponcross
+endif //if %MATCH_STATE < #MATCH_STATE_POSTMATCH
+
+if 0 != %SHOW_AWARDS & 1
+    include newhud/awards
+endif
+
+include newhud/chat
+
+//adds transparent dark background if scoreboard is shown
+if %SCOREBOARD
+setCursor 0 0
+setAlign 0 0
+setSize #WIDTH #HEIGHT
+setColor 0 0 0 0.1
+drawPicByName *whiteImage
+endif
+
+/*
+bitmask cg_showAwards
+000001 (1)  : this does not matter
+000010 (2)  : icons are models
+000100 (4)  : alternate timer placement
+010000 (8) : bomb carrier text instead of icon
+100000 (16) : show amount of alive as icons
+*/
+
+

@@ -1,0 +1,25 @@
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+
+	setAlign 2 2
+	setColor 1 1 1 1
+
+	if %AMMO != #NOTSET
+		setCursor #WIDTH / 2, 85 + #HEIGHT / 2
+		setSize 48 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 48
+		drawWeaponIcon
+		setSize 14 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 14
+		if %WEAPON_ITEM != 1
+			if %LOW_AMMO > %AMMO
+				setSize 18 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 18
+				setColor 1 1 0 1
+			endif
+			if %AMMO <= 0
+				setColor 1 0 0 1
+			endif
+			drawNum %AMMO
+		endif
+	endif
+
+endif
+endif

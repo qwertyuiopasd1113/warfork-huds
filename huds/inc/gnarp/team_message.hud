@@ -3,6 +3,7 @@
 setFontSize %VIDHEIGHT / 30
 setFontFamily "Reddit Mono"
 
+if %TEAMBASED
 if %MESSAGE_ALPHA
 if %MESSAGE_BETA
 	setCursor #WIDTH / 2, 50
@@ -92,5 +93,6 @@ if %MESSAGE_BETA
 	endif
 	setColor 1 1 1 1
 	drawString "?"
+endif
 endif
 endif

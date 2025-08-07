@@ -1,0 +1,22 @@
+if %SHOW_PICKUP
+if %PICKUP_ITEM	
+	setFontFamily "Hemi Head"
+	setFontSize %VIDHEIGHT / 45
+		
+	setCursor #WIDTH / 2, 460
+	setColor 0, 0, 0, 0.8
+	setAlign 2 2
+    moveCursor 1, 1
+	drawString "PICKED UP"
+    moveCursor 0, 10
+	drawItemName %PICKUP_ITEM
+
+    include newhud/set/pickup_color
+	setColorAlpha 0.5
+    moveCursor -1, -1
+	drawItemName %PICKUP_ITEM
+    moveCursor 0, -10
+    setColor 0.7 0.7 0.7 0.5
+	drawString "PICKED UP"
+endif
+endif

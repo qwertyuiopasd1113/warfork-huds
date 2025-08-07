@@ -1,29 +1,29 @@
 if %STUNNED
-setFontFamily "Droid Sans"
+setFontFamily con_fontSystem
 setFontSize %VIDHEIGHT / 64
 setAlign 2 2
-setCursor #WIDTH / 2, 350
-	if %SHOW_SPEED < 2
-		setColor 0.2 0.12 0.12 1
-		drawString "stunned"
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawString "stunned"
-		moveCursor 0, 1
-		drawString "stunned"
-		moveCursor 0, -2
-		drawString "stunned"
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawString "stunned"
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawString "stunned"
-		moveCursor 0, 1
-		drawString "stunned"
-		moveCursor 0, 1
-		drawString "stunned"
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawString "stunned"
-		moveCursor 0, -1
-		setColor 1 0.6 0.6 1
-	endif
+setFontStyle bold
+
+setCursor #WIDTH / 2, 347.5
+	setColor 0.2 0.12 0.12 1
+	drawString "stunned"
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "stunned"
+	moveCursor 0, 1
+	drawString "stunned"
+	moveCursor 0, -2
+	drawString "stunned"
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "stunned"
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "stunned"
+	moveCursor 0, 1
+	drawString "stunned"
+	moveCursor 0, 1
+	drawString "stunned"
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawString "stunned"
+	moveCursor 0, -1
+	setColor 1 0.6 0.6 1
 	drawString "stunned"
 endif

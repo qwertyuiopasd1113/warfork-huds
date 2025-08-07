@@ -17,28 +17,26 @@ if %POWERUP_WARSHELL_TIME != 0
 	setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
 	drawPicByItemIndex #ITEM_WARSHELL
 	setSize 18 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 18
-	if %SHOW_SPEED < 2
-		setColor 0.12 0.16 0.16 1
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 0, -2
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_WARSHELL_TIME
-		moveCursor 0, -1
-		setColor 1 1 1 1
-	endif
+	setColor 0.12 0.16 0.16 1
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 0, -2
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_WARSHELL_TIME
+	moveCursor 0, -1
+	setColor 1 1 1 1
 	drawStringNum %POWERUP_WARSHELL_TIME
 endif
 
@@ -53,28 +51,26 @@ if %POWERUP_QUAD_TIME != 0
 	setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
 	drawPicByItemIndex #ITEM_QUAD
 	setSize 18 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 18
-	if %SHOW_SPEED < 2
-		setColor 0.12 0.16 0.16 1
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 0, -2
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_QUAD_TIME
-		moveCursor 0, -1
-		setColor 1 1 1 1
-	endif
+	setColor 0.12 0.16 0.16 1
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 0, -2
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_QUAD_TIME
+	moveCursor 0, -1
+	setColor 1 1 1 1
 	drawStringNum %POWERUP_QUAD_TIME
 endif
 
@@ -89,28 +85,26 @@ if %POWERUP_REGEN_TIME != 0
 	setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
 	drawPicByItemIndex #ITEM_REGEN
 	setSize 18 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 18
-		if %SHOW_SPEED < 2
-		setColor 0.12 0.16 0.16 1
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 0, -2
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 0, 1
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawStringNum %POWERUP_REGEN_TIME
-		moveCursor 0, -1
-		setColor 1 1 1 1
-	endif
+	setColor 0.12 0.16 0.16 1
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 0, -2
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 0, 1
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawStringNum %POWERUP_REGEN_TIME
+	moveCursor 0, -1
+	setColor 1 1 1 1
 	drawStringNum %POWERUP_REGEN_TIME
 endif
 endif

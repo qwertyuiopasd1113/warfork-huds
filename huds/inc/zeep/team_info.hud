@@ -1,8 +1,8 @@
 // Draws team info (locations, status)
 drawTeamMates
 
-setFontFamily "Virtue"
-setFontSize %VIDHEIGHT / 60
+setFontFamily con_fontSystem
+setFontSize %VIDHEIGHT / 70
 
 setAlign 3 3
 setColor 1 1 1 0.5

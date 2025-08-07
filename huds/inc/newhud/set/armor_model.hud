@@ -1,0 +1,22 @@
+setSize 40 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 40
+
+setrotationspeed 0 1 0
+
+if %ARMOR < 50
+    drawmodelbyname "models/items/armor/shard/shard.md3" "models/items/armor/shard/shard.png"
+endif
+if %ARMOR >= 50
+    if %ARMOR < 100
+        drawmodelbyname "models/items/armor/ga/ga.md3" "models/items/armor/ga/ga.png"
+    endif
+endif
+if %ARMOR >= 100
+    if %ARMOR < 125
+        drawmodelbyname "models/items/armor/ya/ya.md3" "models/items/armor/ya/ya.png"
+    endif
+endif
+
+if %ARMOR >= 125
+    drawmodelbyname "models/items/armor/ra/ra.md3" "models/items/armor/ra/ra.png"
+    setColor 1 0 0 1
+endif

@@ -1,0 +1,39 @@
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+
+setAlign 2 2
+setFontFamily "Hemi Head"
+setFontSize %VIDHEIGHT / 50
+
+if 0 >= %AMMO
+	setSize 24 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 24
+	setCursor #WIDTH / 2 , 50 + #HEIGHT / 2
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	setColor 0 0 0 0.8
+	drawString "No Ammo"
+
+	setColor 1 0 0 0.8
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	drawString "No Ammo"
+    include newhud/ammo
+
+endif
+
+if 0 < %AMMO
+if %LOW_AMMO > %AMMO
+	setCursor #WIDTH / 2 , 50 + #HEIGHT / 2
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	setColor 0 0 0 0.8
+	drawString "Low Ammo"
+
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	setColor 1 1 1 0.8
+	drawString "Low Ammo"
+    include newhud/ammo
+endif
+endif
+
+endif
+endif
+endif

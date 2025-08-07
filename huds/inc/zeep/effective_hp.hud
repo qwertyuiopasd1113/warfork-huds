@@ -1,0 +1,151 @@
+setCursor #WIDTH / 2, 370
+moveCursor -92 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+setFontFamily "Virtue"
+setFontSize %VIDHEIGHT / 30
+
+if %TEAM != #TEAM_SPECTATOR
+		setAlign 3 1		
+		moveCursor 181 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 21
+		setSize 182 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 7
+		setColor 0 0 0 .3
+		drawPicByName, gfx/ui/white
+		setColor 1 1 1 1
+
+		setSize 180 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
+		moveCursor -181 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+
+		setAlign 1 1
+        drawPicBar %HEALTH, 100, gfx/ui/white
+		// overheal
+        setColor 1 0 0 .2
+        drawPicBar %HEALTH - 100, 100, gfx/ui/white
+        drawPicBar %HEALTH - 200, 100, gfx/ui/white
+        drawPicBar %HEALTH - 300, 100, gfx/ui/white
+        drawPicBar %HEALTH - 400, 100, gfx/ui/white
+		setAlign 1 1
+
+		moveCursor -181 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+		setSize 180 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
+		moveCursor 181 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		setAlign 1 1
+
+		setColor 1 1 0 .4
+        drawPicBar %ARMOR, 200, gfx/ui/white
+		setAlign 1 1
+		setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
+		
+		moveCursor 0, 5
+	
+
+		setColor 0.32 0.16 0.16 1
+		drawStringNum %HEALTH
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 0, -2
+		drawStringNum %HEALTH
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 0, 1
+		drawStringNum %HEALTH
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %HEALTH
+		moveCursor 0, -1
+
+		setColor 1 .7 .7 1
+		drawStringNum %HEALTH
+
+		moveCursor 55 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+		ifnot %ARMOR <= 0
+			setColor 0.32 0.32 0.16 1
+
+			drawStringNum %ARMOR
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %ARMOR
+			moveCursor 0, 1
+			drawStringNum %ARMOR
+			moveCursor 0, -2
+			drawStringNum %ARMOR
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %ARMOR
+			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %ARMOR
+			moveCursor 0, 1
+			drawStringNum %ARMOR
+			moveCursor 0, 1
+			drawStringNum %ARMOR
+			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawStringNum %ARMOR
+			moveCursor 0, -1
+
+			setColor 1 1 .7 1
+
+			drawStringNum %ARMOR
+			if %ARMOR < %HEALTH * 2
+				moveCursor 55 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+				setColor 0.32 0.16 0.32 1
+
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 0, 1
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 0, -2
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 0, 1
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 0, 1
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %ARMOR + %HEALTH
+				moveCursor 0, -1
+
+				setColor 1 .7 1 1
+				drawStringNum %ARMOR + %HEALTH
+			endif
+
+			if %ARMOR > %HEALTH * 2
+				moveCursor 55 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+
+				setColor 0.32 0.16 0.32 1
+
+				drawStringNum %HEALTH * 3
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %HEALTH * 3
+				moveCursor 0, 1
+				drawStringNum %HEALTH * 3
+				moveCursor 0, -2
+				drawStringNum %HEALTH * 3
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %HEALTH * 3
+				moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %HEALTH * 3
+				moveCursor 0, 1
+				drawStringNum %HEALTH * 3
+				moveCursor 0, 1
+				drawStringNum %HEALTH * 3
+				moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+				drawStringNum %HEALTH * 3
+				moveCursor 0, -1
+
+
+				setColor 1 .7 1 1
+
+				drawStringNum %HEALTH * 3
+			endif
+		endif
+
+endif

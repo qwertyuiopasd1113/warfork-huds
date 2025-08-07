@@ -28,30 +28,29 @@ if %TEAM != #TEAM_SPECTATOR
 		moveCursor -87 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 5
 		setSize 32 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 32
 		
-		if %SHOW_SPEED < 2
-			setColor 0.16 0.16 0.16 1
-			if %ARMOR < 30
-				setColor 0.32 0.32 0.16 1
-			endif
-			drawStringNum %ARMOR
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %ARMOR
-			moveCursor 0, 1
-			drawStringNum %ARMOR
-			moveCursor 0, -2
-			drawStringNum %ARMOR
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %ARMOR
-			moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %ARMOR
-			moveCursor 0, 1
-			drawStringNum %ARMOR
-			moveCursor 0, 1
-			drawStringNum %ARMOR
-			moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-			drawStringNum %ARMOR
-			moveCursor 0, -1
+		setColor 0.16 0.16 0.16 1
+		if %ARMOR < 30
+			setColor 0.32 0.32 0.16 1
 		endif
+		drawStringNum %ARMOR
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %ARMOR
+		moveCursor 0, 1
+		drawStringNum %ARMOR
+		moveCursor 0, -2
+		drawStringNum %ARMOR
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %ARMOR
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %ARMOR
+		moveCursor 0, 1
+		drawStringNum %ARMOR
+		moveCursor 0, 1
+		drawStringNum %ARMOR
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawStringNum %ARMOR
+		moveCursor 0, -1
+
 		setColor 1 1 1 1
 		if %ARMOR < 30
 			setColor 1 1 .7 1

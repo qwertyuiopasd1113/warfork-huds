@@ -1,0 +1,65 @@
+setCursor #WIDTH / 2, 6
+setFontSize %VIDHEIGHT / 25
+setAlign 2 1
+
+
+if 0 != %SHOW_AWARDS & 4
+	setCursor #WIDTH / 2, 480
+endif
+
+setFontFamily "WarsowNumbersOutline"
+setColor 0 0 0 1
+drawClock
+setFontFamily "WarsowNumbers"
+setColor 1 1 1 1
+if %SHOW_PICKUP > 0
+	if %PICKUP_ITEM == #ITEM_RED_ARMOR
+		setColor 1 0 0 1 // red
+	endif
+	if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR
+		setColor 1 1 0 1 // yellow
+	endif
+	if %PICKUP_ITEM == #ITEM_GREEN_ARMOR
+		setColor 0 1 0 1 // green
+	endif
+	if %PICKUP_ITEM == #ITEM_MEGA_HEALTH
+		setColor 1 0 1 1 // magenta
+	endif
+	if %PICKUP_ITEM == #ITEM_QUAD_DAMAGE
+		setColor 1 0.5 0 1 // orange
+	endif
+	if %PICKUP_ITEM == #ITEM_WARSHELL
+		setColor 0 1 1 1 // cyan
+	endif
+endif
+drawClock
+
+// MATCH STATES
+setCursor #WIDTH / 2, 30
+
+if 0 != %SHOW_AWARDS & 4
+	setCursor #WIDTH / 2, 15
+endif
+
+setFontFamily "Hemi Head"
+setFontStyle "italic"
+setFontSize %VIDHEIGHT / 50
+
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	setColor 0 0 0 1
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	drawString "WARMUP"
+	
+	setColor 0.4 1 0.4 1
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	drawString "WARMUP"
+endif
+if %OVERTIME
+	setColor 0 0 0 1
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	drawString "OVERTIME"
+	
+	setColor 0.4 1 0.4 1
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	drawString "OVERTIME"
+endif

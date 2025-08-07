@@ -1,0 +1,15 @@
+if %ARMOR >= 125
+	setColor 1 0 0 1
+endif
+if %ARMOR < 125
+	setColor 1 0.96 0 1
+endif
+if %ARMOR < 100
+	setColor 0.11 0.84 0.26 1
+endif
+if %ARMOR < 50
+	setColor 0.50 0.95 0.59 1
+endif
+if %ARMOR <= 0
+	setColor 0.3 0.3 0.3 1
+endif

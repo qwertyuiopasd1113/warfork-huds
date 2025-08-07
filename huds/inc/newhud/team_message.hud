@@ -1,0 +1,79 @@
+//shows value of alive players
+
+setFontSize %VIDHEIGHT / 50
+setFontFamily "Hemi Head"
+if %MESSAGE_SELF
+	setCursor #WIDTH / 2, 460
+	setAlign 2 1
+	setColor 0 0 0 1
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	drawCleanStatString %MESSAGE_SELF
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	drawStatString %MESSAGE_SELF
+endif
+
+if %MESSAGE_OTHER
+	setCursor #WIDTH / 2, 440
+	setAlign 2 1
+	setColor 0 0 0 1
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+	drawCleanStatString %MESSAGE_OTHER
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+	drawStatString %MESSAGE_OTHER
+	endif
+
+setFontSize %VIDHEIGHT / 26
+setFontFamily "WarsowNumbers"
+if %TEAMBASED
+if %MESSAGE_ALPHA
+if %MESSAGE_BETA
+	setCursor #WIDTH / 2, 50
+	setAlign 2 2
+	moveCursor -115 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	
+	setFontFamily "WarsowNumbersOutline"
+	setColor 0 0 0 1
+	drawStatString %MESSAGE_ALPHA
+
+	setFontFamily "WarsowNumbers"
+	setColor 1 1 1 1
+	drawStatString %MESSAGE_ALPHA
+	if 0 != %SHOW_AWARDS & 16
+		setAlign 1 2
+		moveCursor 20 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -32
+		setSpecialFontFamily "Silhouette"
+		setColor 0 0 0 1
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		drawStringRepeatConfigString "?" %MESSAGE_ALPHA
+
+		setColorToTeamColor #TEAM_ALPHA
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+		drawStringRepeatConfigString "?" %MESSAGE_ALPHA
+	endif
+
+	setCursor #WIDTH / 2, 50
+	setAlign 2 2
+	moveCursor 115 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setFontFamily "WarsowNumbersOutline"
+	setColor 0 0 0 1
+	drawStatString %MESSAGE_BETA
+
+	setFontFamily "WarsowNumbers"
+	setColor 1 1 1 1
+	drawStatString %MESSAGE_BETA
+	if 0 != %SHOW_AWARDS & 16
+		setAlign 3 2
+		moveCursor -20 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -32
+		setSpecialFontFamily "Silhouette"
+		setColor 0 0 0 1
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		drawStringRepeatConfigString "?" %MESSAGE_BETA
+
+		setColorToTeamColor #TEAM_BETA
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+		drawStringRepeatConfigString "?" %MESSAGE_BETA
+	endif
+
+endif
+endif
+endif

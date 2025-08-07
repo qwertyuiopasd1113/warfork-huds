@@ -1,0 +1,19 @@
+setAlign 1 1
+setCursor 0 200
+setFontFamily "Hemi Head"
+setFontSize %VIDHEIGHT / 60
+setColor 1 1 1 1
+moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+setColor 0.5 0.5 0.5 0.5
+
+ifnot %SCOREBOARD
+	setSize 100 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 100
+	drawMiniMap 0 1
+
+	
+endif
+if %SCOREBOARD
+	setColor .5 .5 .5 1
+	setSize 300 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 300
+	drawMiniMap 1 1
+endif

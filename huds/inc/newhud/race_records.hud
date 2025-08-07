@@ -1,0 +1,30 @@
+if %RACE
+if %SCOREBOARD
+	if %MESSAGE_OTHER
+		setColor 1, 1, 1, 1
+		setCursor 8, 80
+		setAlign #LEFT, #TOP
+		setFontFamily con_fontSystem
+		setFontSize con_fontSystemSmall
+		drawStatString %MESSAGE_OTHER
+	endif
+
+	if %MESSAGE_ALPHA
+		setColor 1, 1, 1, 1
+		setCursor 8, 96
+		setAlign #LEFT, #TOP
+		setFontFamily con_fontSystem
+		setFontSize con_fontSystemSmall
+		drawStatString %MESSAGE_ALPHA
+	endif
+
+	if %MESSAGE_BETA
+		setColor 1, 1, 1, 1
+		setCursor 8, 112
+		setAlign #LEFT, #TOP
+		setFontFamily con_fontSystem
+		setFontSize con_fontSystemSmall
+		drawStatString %MESSAGE_BETA
+	endif
+endif
+endif

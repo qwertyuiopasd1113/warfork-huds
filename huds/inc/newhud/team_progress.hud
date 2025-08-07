@@ -1,0 +1,130 @@
+if %PROGRESS_SELF
+		setCursor #WIDTH / 2, 500
+		moveCursor -201 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		setAlign 1 3
+		setSize 2 + 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 82
+		setColor 0 0 0 .2
+		drawPicByName, gfx/ui/white
+		setColorToTeamColor %TEAM
+
+		setSize 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 80
+		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+		if %PROGRESS_SELF > 0
+			setColorToTeamColor %TEAM
+			drawPicBar %PROGRESS_SELF, 100, "gfx/ui/white"
+		endif
+		if %PROGRESS_SELF < 0
+			drawPicBar %PROGRESS_SELF * -1, 100, "gfx/ui/white"
+		endif
+		setAlign 3, 3
+		moveCursor -10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -40 + 12 / 2
+
+
+		moveCursor 0, 1
+		setSize 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+		if %PROGRESS_SELF > 0
+			setColor 0.5 1 0.6 1
+			drawNum %PROGRESS_SELF
+		endif
+		if %PROGRESS_SELF < 0
+			setColor 1 0.5 0.6 1
+			drawNum -1 * %PROGRESS_SELF
+		endif
+
+endif
+
+if %PROGRESS_OTHER
+		setCursor #WIDTH / 2, 500
+		moveCursor 201 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 1
+		setAlign 3 3
+		setSize 2 + 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 82
+		setColor 0 0 0 .2
+		drawPicByName, gfx/ui/white
+		setColorToTeamColor %TEAM
+
+		setSize 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 80
+		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -1
+		if %PROGRESS_OTHER > 0
+			drawPicBar %PROGRESS_OTHER, 100, "gfx/ui/white"
+		endif
+		if %PROGRESS_OTHER < 0
+			drawPicBar %PROGRESS_OTHER * -1, 100, "gfx/ui/white"
+		endif
+		setAlign 1, 3
+		moveCursor 10 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -40 + 12 / 2
+
+	
+		moveCursor 0, 1
+		setSize 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+		if %PROGRESS_OTHER > 0
+			setColor 0.5 1 0.6 1
+			drawNum %PROGRESS_OTHER
+		endif
+		if %PROGRESS_OTHER < 0
+			setColor 1 0.5 0.6 1
+			drawNum -1 * %PROGRESS_OTHER
+		endif
+endif
+
+//
+// Draws progress when in freefly.
+//
+if %PROGRESS_ALPHA
+	setSize 132 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+	setAlign 3 1
+	setCursor #WIDTH / 2, 0
+	moveCursor -80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28
+
+	// Bar
+	setColor 0 0 0 0.5
+	drawPicByName "gfx/ui/white"
+	if %PROGRESS_ALPHA > 0
+		setColorToTeamColor #TEAM_ALPHA
+		drawPicBar %PROGRESS_ALPHA, 100, "gfx/ui/white"
+	endif
+	if %PROGRESS_ALPHA < 0
+		setColorToTeamColor #TEAM_BETA
+		drawPicBar %PROGRESS_ALPHA * -1, 100, "gfx/ui/white"
+	endif
+
+	// Number
+	if %PROGRESS_ALPHA < 0
+		setColor 1 0 0 0.9
+	endif
+	if %PROGRESS_ALPHA > 0
+		setColor 0 1 0 0.9
+	endif
+	setSize 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+	moveCursor -3 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawNum %PROGRESS_ALPHA
+endif
+
+if %PROGRESS_BETA
+	setSize 132 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+	setAlign 1 1
+	setCursor #WIDTH / 2, 0
+	moveCursor 80 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 28
+
+	// Bar
+	setColor 0 0 0 0.5
+	drawPicByName "gfx/ui/white"
+	if %PROGRESS_BETA > 0
+		setColorToTeamColor #TEAM_BETA
+		drawPicBar %PROGRESS_BETA, 100, "gfx/ui/white"
+	endif
+	if %PROGRESS_BETA < 0
+		setColorToTeamColor #TEAM_ALPHA
+		drawPicBar %PROGRESS_BETA * -1, 100, "gfx/ui/white"
+	endif
+
+	// Number
+	if %PROGRESS_BETA < 0
+		setColor 1 0 0 0.9
+	endif
+	if %PROGRESS_BETA > 0
+		setColor 0 1 0 0.9
+	endif
+	setSize 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 12
+	moveCursor 3 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawNum %PROGRESS_BETA
+endif
