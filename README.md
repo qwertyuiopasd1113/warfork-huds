@@ -1,6 +1,16 @@
 # warfork-huds
 huds i made for warfork  
 to use them (not goob) in warsow go into the pk3 and delete drowning.hud
+# newhud
+bitmask `cg_showAwards`
+```
+000001 (1)  : enable awards
+000010 (2)  : health/armor icons are models
+000100 (4)  : alternate timer placement
+010000 (8)  : bomb carrier text instead of icon
+100000 (16) : show alive on team silhouettes
+```
+e.g all enabled (1+2+4+8+16 = 31) `cg_showAwards 31`
   
 # goob
 `cg_showFPS 2` to use in warsow  
