@@ -8,24 +8,22 @@ if %WEAPON_ITEM != #WEAP_GUNBLADE
 	// no ammo warning
 	if 0 >= %AMMO
 		setCursor #WIDTH / 2, 320
-		setColor 1 0 0 0.8
-			if %SHOW_SPEED < 2
-				setColor 0 0 0 1
-				drawString "NO AMMO"
-				moveCursor 0, -1
-				drawString "NO AMMO"
-				moveCursor 0, -1
-				drawString "NO AMMO"
-				moveCursor 1, 0
-				drawString "NO AMMO"
-				moveCursor 1, 0
-				drawString "NO AMMO"
-				moveCursor 0, 1
-				drawString "NO AMMO"
-				moveCursor 0, 1
-				drawString "NO AMMO"
-				moveCursor -1, -1
-			endif
+		setColor 0 0 0 1
+		drawString "NO AMMO"
+		moveCursor 0, -1
+		drawString "NO AMMO"
+		moveCursor 0, -1
+		drawString "NO AMMO"
+		moveCursor 1, 0
+		drawString "NO AMMO"
+		moveCursor 1, 0
+		drawString "NO AMMO"
+		moveCursor 0, 1
+		drawString "NO AMMO"
+		moveCursor 0, 1
+		drawString "NO AMMO"
+		moveCursor -1, -1
+
 		setColor 1 0.2 0.2 1
 		drawString "NO AMMO"
 		setColor 1 0 0 0.7
@@ -35,24 +33,23 @@ if %WEAPON_ITEM != #WEAP_GUNBLADE
 	if %LOW_AMMO > %AMMO
 	if 0 < %AMMO
 setCursor #WIDTH / 2, 320
-		setColor 1 0 0 0.8
-			if %SHOW_SPEED < 2
-				setColor 0 0 0 1
-				drawString "LOW AMMO"
-				moveCursor 0, -1
-				drawString "LOW AMMO"
-				moveCursor 0, -1
-				drawString "LOW AMMO"
-				moveCursor 1, 0
-				drawString "LOW AMMO"
-				moveCursor 1, 0
-				drawString "LOW AMMO"
-				moveCursor 0, 1
-				drawString "LOW AMMO"
-				moveCursor 0, 1
-				drawString "LOW AMMO"
-				moveCursor -1, -1
-			endif
+
+		setColor 0 0 0 1
+		drawString "LOW AMMO"
+		moveCursor 0, -1
+		drawString "LOW AMMO"
+		moveCursor 0, -1
+		drawString "LOW AMMO"
+		moveCursor 1, 0
+		drawString "LOW AMMO"
+		moveCursor 1, 0
+		drawString "LOW AMMO"
+		moveCursor 0, 1
+		drawString "LOW AMMO"
+		moveCursor 0, 1
+		drawString "LOW AMMO"
+		moveCursor -1, -1
+
 		setColor 1 0.2 0.2 1
 		drawString "LOW AMMO"
 		setColor 1 0 0 0.7

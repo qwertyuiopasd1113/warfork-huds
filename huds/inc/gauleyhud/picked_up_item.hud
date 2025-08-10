@@ -7,26 +7,24 @@ setfontsize %VIDHEIGHT / 48
 setAlign 2 2
 setCursor 400, 330
 
-if %SHOW_SPEED < 2
-	setColor 0 0 0 1
-	moveCursor 0, 1
-	drawItemName %PICKUP_ITEM
-	moveCursor 1, 0
-	drawItemName %PICKUP_ITEM
-	moveCursor 0, -1
-	drawItemName %PICKUP_ITEM
-	moveCursor 0, -1
-	drawItemName %PICKUP_ITEM
-	moveCursor -1, 0
-	drawItemName %PICKUP_ITEM
-	moveCursor -1, 0
-	drawItemName %PICKUP_ITEM
-	moveCursor 0, 1
-	drawItemName %PICKUP_ITEM
-	moveCursor 0, 1
-	drawItemName %PICKUP_ITEM
-	moveCursor 1, -1
-endif
+setColor 0 0 0 1
+moveCursor 0, 1
+drawItemName %PICKUP_ITEM
+moveCursor 1, 0
+drawItemName %PICKUP_ITEM
+moveCursor 0, -1
+drawItemName %PICKUP_ITEM
+moveCursor 0, -1
+drawItemName %PICKUP_ITEM
+moveCursor -1, 0
+drawItemName %PICKUP_ITEM
+moveCursor -1, 0
+drawItemName %PICKUP_ITEM
+moveCursor 0, 1
+drawItemName %PICKUP_ITEM
+moveCursor 0, 1
+drawItemName %PICKUP_ITEM
+moveCursor 1, -1
 
 setColor 1 1 1 1
 drawItemName %PICKUP_ITEM

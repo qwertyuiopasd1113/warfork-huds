@@ -19,7 +19,7 @@ setAlign 2 2
 // < = > signs for score (like spec hud)
 
 if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
-	if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		drawString "\="
 		moveCursor 0, -1
@@ -35,7 +35,7 @@ if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
 		moveCursor 0, 1
 		drawString "\="
 		moveCursor -1, -1
-	endif
+
 	setColor 1 1 1 1
 	drawString "\="
 endif
@@ -43,7 +43,7 @@ endif
 if %TEAM_ALPHA_SCORE != %TEAM_BETA_SCORE
 if %TEAM == #TEAM_ALPHA
 	if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
-		if %SHOW_SPEED < 2
+
 			setColor 0 0 0 1
 			drawString "\<"
 			moveCursor 0, -1
@@ -59,13 +59,13 @@ if %TEAM == #TEAM_ALPHA
 			moveCursor 0, 1
 			drawString "\<"
 			moveCursor -1, -1
-		endif
+
 		setColor 1 1 1 1
 		drawString "\<"
 	endif
 
 	if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
-		if %SHOW_SPEED < 2
+
 			setColor 0 0 0 1
 			drawString "\>"
 			moveCursor 0, -1
@@ -81,7 +81,7 @@ if %TEAM == #TEAM_ALPHA
 			moveCursor 0, 1
 			drawString "\>"
 			moveCursor -1, -1
-		endif
+
 		setColor 1 1 1 1
 		drawString "\>"
 	endif
@@ -89,7 +89,7 @@ endif
 
 if %TEAM == #TEAM_BETA
 	if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
-		if %SHOW_SPEED < 2
+
 			setColor 0 0 0 1
 			drawString "\<"
 			moveCursor 0, -1
@@ -105,13 +105,13 @@ if %TEAM == #TEAM_BETA
 			moveCursor 0, 1
 			drawString "\<"
 			moveCursor -1, -1
-		endif
+
 		setColor 1 1 1 1
 		drawString "\<"
 	endif
 
 	if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
-		if %SHOW_SPEED < 2
+
 			setColor 0 0 0 1
 			drawString "\>"
 			moveCursor 0, -1
@@ -127,7 +127,7 @@ if %TEAM == #TEAM_BETA
 			moveCursor 0, 1
 			drawString "\>"
 			moveCursor -1, -1
-		endif
+
 		setColor 1 1 1 1
 		drawString "\>"
 	endif
@@ -141,7 +141,7 @@ moveCursor -20, 0
 setfontfamily "Anton"
 
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
@@ -160,12 +160,12 @@ if %TEAM == #TEAM_ALPHA
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM
 	drawStringNum %TEAM_ALPHA_SCORE
 endif
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
@@ -184,7 +184,7 @@ if %TEAM == #TEAM_BETA
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM
 	drawStringNum %TEAM_BETA_SCORE
 
@@ -197,7 +197,7 @@ moveCursor -10, 0
 setAlign 3 2
 setFontFamily "Fredoka SemiCondensed"
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_ALPHA_NAME
@@ -216,12 +216,12 @@ if %TEAM == #TEAM_ALPHA
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_ALPHA_NAME
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM
 	drawStatString #TEAM_ALPHA_NAME
 endif
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_BETA_NAME
@@ -240,7 +240,7 @@ if %TEAM == #TEAM_BETA
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_BETA_NAME
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM
 	drawStatString #TEAM_BETA_NAME
 endif
@@ -253,7 +253,7 @@ endif
 //ENEMY TEAM
 moveCursor 2 * 20, 0
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
@@ -272,12 +272,12 @@ if %TEAM == #TEAM_BETA
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStringNum %TEAM_ALPHA_SCORE
 endif
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
@@ -296,7 +296,7 @@ if %TEAM == #TEAM_ALPHA
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStringNum %TEAM_BETA_SCORE
 endif
@@ -307,7 +307,7 @@ setFontSize %VIDHEIGHT / 50
 moveCursor 10, 0
 setFontFamily "Fredoka SemiCondensed"
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_BETA_NAME
@@ -326,12 +326,12 @@ if %TEAM == #TEAM_ALPHA
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_BETA_NAME
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStatString #TEAM_BETA_NAME
 endif
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_ALPHA_NAME
@@ -350,7 +350,7 @@ if %TEAM == #TEAM_BETA
 		moveCursor 0, 1
 		drawCleanStatString #TEAM_ALPHA_NAME
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStatString #TEAM_ALPHA_NAME
 endif
@@ -365,7 +365,7 @@ endif
 moveCursor -20, 0
 if %TEAM == #TEAM_SPECTATOR
 	moveCursor -20, 0
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
@@ -384,11 +384,11 @@ if %TEAM == #TEAM_SPECTATOR
 		moveCursor 0, 1
 		drawStringNum %TEAM_ALPHA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor #TEAM_ALPHA
 	drawStringNum %TEAM_ALPHA_SCORE
 	moveCursor 2 * 20, 0
-    if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
@@ -407,7 +407,7 @@ if %TEAM == #TEAM_SPECTATOR
 		moveCursor 0, 1
 		drawStringNum %TEAM_BETA_SCORE
 		moveCursor 1, -1
-	endif
+
 	setColorToTeamColor #TEAM_BETA
 	drawStringNum %TEAM_BETA_SCORE
 endif

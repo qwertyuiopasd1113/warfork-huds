@@ -26,23 +26,21 @@ if %INSTAGIB == 0
 		if %INSTAGIB == 0
 			if %AMMO != #NOTSET
 				setColor 1 1 1 1
-				if %SHOW_SPEED < 2
-					setColor 0 0 0 1
-					drawstringNum %AMMO
-					moveCursor 0, -1
-					drawstringNum %AMMO
-					moveCursor 0, -1
-					drawstringNum %AMMO
-					moveCursor 1, 0
-					drawstringNum %AMMO
-					moveCursor 1, 0
-					drawstringNum %AMMO
-					moveCursor 0, 1
-					drawstringNum %AMMO
-					moveCursor 0, 1
-					drawstringNum %AMMO
-					moveCursor -1, -1
-				endif
+				setColor 0 0 0 1
+				drawstringNum %AMMO
+				moveCursor 0, -1
+				drawstringNum %AMMO
+				moveCursor 0, -1
+				drawstringNum %AMMO
+				moveCursor 1, 0
+				drawstringNum %AMMO
+				moveCursor 1, 0
+				drawstringNum %AMMO
+				moveCursor 0, 1
+				drawstringNum %AMMO
+				moveCursor 0, 1
+				drawstringNum %AMMO
+				moveCursor -1, -1
 				setColor 1 1 1 1
 				if %AMMO < %LOW_AMMO
 					setColor 1 0.6 0.6 1

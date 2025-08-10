@@ -1,25 +1,25 @@
 if %STUNNED
-setFontFamily "Bebas Neue"
-setFontSize %VIDHEIGHT / 48
-setAlign 2 2
-setCursor #WIDTH / 2, 320
-	if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		drawString STUNNED
-		moveCursor 0, -1
-		drawString STUNNED
-		moveCursor 0, -1
-		drawString STUNNED
-		moveCursor 1, 0
-		drawString STUNNED
-		moveCursor 1, 0
-		drawString STUNNED
-		moveCursor 0, 1
-		drawString STUNNED
-		moveCursor 0, 1
-		drawString STUNNED
-		moveCursor -1, -1
-	endif
+	setFontFamily "Bebas Neue"
+	setFontSize %VIDHEIGHT / 48
+	setAlign 2 2
+	setCursor #WIDTH / 2, 320
+
+	setColor 0 0 0 1
+	drawString STUNNED
+	moveCursor 0, -1
+	drawString STUNNED
+	moveCursor 0, -1
+	drawString STUNNED
+	moveCursor 1, 0
+	drawString STUNNED
+	moveCursor 1, 0
+	drawString STUNNED
+	moveCursor 0, 1
+	drawString STUNNED
+	moveCursor 0, 1
+	drawString STUNNED
+	moveCursor -1, -1
+
 	setColor 1 0.4 0.4 1
 	drawString STUNNED
 endif

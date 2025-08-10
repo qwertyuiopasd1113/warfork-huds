@@ -12,26 +12,26 @@ endif
 setAlign 2 2
 setFontSize %VIDHEIGHT / 30
 
-if %SHOW_SPEED < 2
-	setColor 0 0 0 1
-	moveCursor 0, 1
-	drawStringNum %SCORE
-	moveCursor 1, 0
-	drawStringNum %SCORE
-	moveCursor 0, -1
-	drawStringNum %SCORE
-	moveCursor 0, -1
-	drawStringNum %SCORE
-	moveCursor -1, 0
-	drawStringNum %SCORE
-	moveCursor -1, 0
-	drawStringNum %SCORE
-	moveCursor 0, 1
-	drawStringNum %SCORE
-	moveCursor 0, 1
-	drawStringNum %SCORE
-	moveCursor 1, -1
-endif
+
+setColor 0 0 0 1
+moveCursor 0, 1
+drawStringNum %SCORE
+moveCursor 1, 0
+drawStringNum %SCORE
+moveCursor 0, -1
+drawStringNum %SCORE
+moveCursor 0, -1
+drawStringNum %SCORE
+moveCursor -1, 0
+drawStringNum %SCORE
+moveCursor -1, 0
+drawStringNum %SCORE
+moveCursor 0, 1
+drawStringNum %SCORE
+moveCursor 0, 1
+drawStringNum %SCORE
+moveCursor 1, -1
+
 setcolor 1 1 1 1
 drawStringNum %SCORE
 

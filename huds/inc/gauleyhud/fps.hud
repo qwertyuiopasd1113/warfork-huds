@@ -6,26 +6,25 @@ if %SHOW_FPS
 	setCursor #WIDTH - 2, 2
 	setSize 12 * %VIDHEIGHT / %VIDWIDTH, 12
 
-	if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStringNum %FPS
-		moveCursor 1, 0
-		drawStringNum %FPS
-		moveCursor 0, -1
-		drawStringNum %FPS
-		moveCursor 0, -1
-		drawStringNum %FPS
-		moveCursor -1, 0
-		drawStringNum %FPS
-		moveCursor -1, 0
-		drawStringNum %FPS
-		moveCursor 0, 1
-		drawStringNum %FPS
-		moveCursor 0, 1
-		drawStringNum %FPS
-		moveCursor 1, -1
-	endif
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStringNum %FPS
+	moveCursor 1, 0
+	drawStringNum %FPS
+	moveCursor 0, -1
+	drawStringNum %FPS
+	moveCursor 0, -1
+	drawStringNum %FPS
+	moveCursor -1, 0
+	drawStringNum %FPS
+	moveCursor -1, 0
+	drawStringNum %FPS
+	moveCursor 0, 1
+	drawStringNum %FPS
+	moveCursor 0, 1
+	drawStringNum %FPS
+	moveCursor 1, -1
+
 	setColor 1 1 1 1
 	drawStringNum %FPS
 endif

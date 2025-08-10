@@ -8,23 +8,23 @@ setfontsize %VIDHEIGHT / 30
 setAlign 2 2
 setCursor 400, 360
 
-if %SHOW_SPEED < 2
-    setColor 0 0 0 1
-    drawstringNum %SPEED
-    moveCursor 0, -1
-    drawstringNum %SPEED
-    moveCursor 0, -1
-    drawstringNum %SPEED
-    moveCursor 1, 0
-    drawstringNum %SPEED
-    moveCursor 1, 0
-    drawstringNum %SPEED
-    moveCursor 0, 1
-    drawstringNum %SPEED
-    moveCursor 0, 1
-    drawstringNum %SPEED
-    moveCursor -1, -1
-endif
+
+setColor 0 0 0 1
+drawstringNum %SPEED
+moveCursor 0, -1
+drawstringNum %SPEED
+moveCursor 0, -1
+drawstringNum %SPEED
+moveCursor 1, 0
+drawstringNum %SPEED
+moveCursor 1, 0
+drawstringNum %SPEED
+moveCursor 0, 1
+drawstringNum %SPEED
+moveCursor 0, 1
+drawstringNum %SPEED
+moveCursor -1, -1
+
 
 setColor 1 1 1 1
 drawstringNum %SPEED

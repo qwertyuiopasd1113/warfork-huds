@@ -24,7 +24,7 @@ if %PROGRESS_SELF
 
 	// Number
 	moveCursor -12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -15
-	if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		drawstringNum %PROGRESS_SELF
 		moveCursor 0, -1
@@ -40,7 +40,7 @@ if %PROGRESS_SELF
 		moveCursor 0, 1
 		drawstringNum %PROGRESS_SELF
 		moveCursor -1, -1
-	endif
+
 	if %PROGRESS_SELF < 0
 		setColor 1 0 0 0.9
 	endif
@@ -73,7 +73,7 @@ if %PROGRESS_OTHER
 
 	// Number
 	moveCursor 12 * 1.333 * %VIDHEIGHT / %VIDWIDTH, -15
-	if %SHOW_SPEED < 2
+
 		setColor 0 0 0 1
 		drawstringNum %PROGRESS_OTHER
 		moveCursor 0, -1
@@ -89,7 +89,7 @@ if %PROGRESS_OTHER
 		moveCursor 0, 1
 		drawstringNum %PROGRESS_OTHER
 		moveCursor -1, -1
-	endif
+
 	if %PROGRESS_OTHER < 0
 		setColor 1 0 0 0.9
 	endif

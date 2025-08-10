@@ -21,23 +21,23 @@ if %DROWNING < 120
 	if %DROWNING <= 0
 	setAlign 2 2
 	moveCursor 0, 5
-	if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		drawString "DROWNING"
-		moveCursor 0, -1
-		drawString "DROWNING"
-		moveCursor 0, -1
-		drawString "DROWNING"
-		moveCursor 1, 0
-		drawString "DROWNING"
-		moveCursor 1, 0
-		drawString "DROWNING"
-		moveCursor 0, 1
-		drawString "DROWNING"
-		moveCursor 0, 1
-		drawString "DROWNING"
-		moveCursor -1, -1
-	endif
+
+	setColor 0 0 0 1
+	drawString "DROWNING"
+	moveCursor 0, -1
+	drawString "DROWNING"
+	moveCursor 0, -1
+	drawString "DROWNING"
+	moveCursor 1, 0
+	drawString "DROWNING"
+	moveCursor 1, 0
+	drawString "DROWNING"
+	moveCursor 0, 1
+	drawString "DROWNING"
+	moveCursor 0, 1
+	drawString "DROWNING"
+	moveCursor -1, -1
+
 	setColor 0.2 0.6 1 1
 	drawString "DROWNING"
 	endif

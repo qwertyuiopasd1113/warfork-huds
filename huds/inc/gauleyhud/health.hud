@@ -6,23 +6,22 @@ setfontsize %VIDHEIGHT / 25
 setAlign 1 2
 setCursor 320, 340
 
-if %SHOW_SPEED < 2
-    setColor 0 0 0 1
-    drawstringNum %HEALTH
-    moveCursor 0, -1
-    drawstringNum %HEALTH
-    moveCursor 0, -1
-    drawstringNum %HEALTH
-    moveCursor 1, 0
-    drawstringNum %HEALTH
-    moveCursor 1, 0
-    drawstringNum %HEALTH
-    moveCursor 0, 1
-    drawstringNum %HEALTH
-    moveCursor 0, 1
-    drawstringNum %HEALTH
-    moveCursor -1, -1
-endif
+setColor 0 0 0 1
+drawstringNum %HEALTH
+moveCursor 0, -1
+drawstringNum %HEALTH
+moveCursor 0, -1
+drawstringNum %HEALTH
+moveCursor 1, 0
+drawstringNum %HEALTH
+moveCursor 1, 0
+drawstringNum %HEALTH
+moveCursor 0, 1
+drawstringNum %HEALTH
+moveCursor 0, 1
+drawstringNum %HEALTH
+moveCursor -1, -1
+
 setColor 1, %HEALTH / 100, %HEALTH / 100, 1
 drawstringNum %HEALTH
 

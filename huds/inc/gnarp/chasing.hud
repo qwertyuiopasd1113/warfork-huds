@@ -4,27 +4,27 @@ if %CHASING != #NOTSET
 	setFontFamily "Reddit Mono"
 	setFontSize %VIDWIDTH / 50 
 
-	if %SHOW_SPEED < 2
-		setColor 0.12 0.12 0.12 1
-		drawCleanPlayerName %CHASING
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawCleanPlayerName %CHASING
-		moveCursor 0, 1
-		drawCleanPlayerName %CHASING
-		moveCursor 0, -2
-		drawCleanPlayerName %CHASING
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawCleanPlayerName %CHASING
-		moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawCleanPlayerName %CHASING
-		moveCursor 0, 1
-		drawCleanPlayerName %CHASING
-		moveCursor 0, 1
-		drawCleanPlayerName %CHASING
-		moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
-		drawCleanPlayerName %CHASING
-		moveCursor 0, -1
-	endif
+
+	setColor 0.12 0.12 0.12 1
+	drawCleanPlayerName %CHASING
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawCleanPlayerName %CHASING
+	moveCursor 0, 1
+	drawCleanPlayerName %CHASING
+	moveCursor 0, -2
+	drawCleanPlayerName %CHASING
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawCleanPlayerName %CHASING
+	moveCursor -1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawCleanPlayerName %CHASING
+	moveCursor 0, 1
+	drawCleanPlayerName %CHASING
+	moveCursor 0, 1
+	drawCleanPlayerName %CHASING
+	moveCursor 1 * 1.333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawCleanPlayerName %CHASING
+	moveCursor 0, -1
+
 	setColor 1 1 1 1
 	drawPlayerName %CHASING
 endif

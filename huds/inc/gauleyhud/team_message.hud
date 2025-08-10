@@ -1,3 +1,49 @@
+if %MESSAGE_SELF
+	setAlign 2 2
+	setCursor #WIDTH / 2, 420
+	setFontFamily "Fredoka SemiCondensed"
+	setFontSize %VIDHEIGHT / 50
+
+    setColor 0 0 0 1
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor 0, -1
+	drawCleanStatString %MESSAGE_SELF
+    moveCursor 0, -1
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor 1, 0
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor 1, 0
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor 0, 1
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor 0, 1
+    drawCleanStatString %MESSAGE_SELF
+    moveCursor -1, -1
+
+	setColor 1 1 1 1
+    drawStatString %MESSAGE_SELF
+endif
+
+if %MESSAGE_OTHER
+	setColor 1 1 1 1
+	setCursor #WIDTH / 2, 400
+	setAlign 2 1
+	setFontFamily "Droid Sans"
+	setFontStyle "Bold"
+	setFontSize %VIDHEIGHT / 45
+	setColor 0 0 0 1
+	drawCleanStatString %MESSAGE_OTHER
+	moveCursor 0, -1
+	drawCleanStatString %MESSAGE_OTHER
+	moveCursor 1, 0
+	drawCleanStatString %MESSAGE_OTHER
+	moveCursor 0, 1
+	drawCleanStatString %MESSAGE_OTHER
+	moveCursor -0.5, -0.5
+	setColor 1 1 1 1
+	drawStatString %MESSAGE_OTHER
+	setFontStyle Normal
+endif
 
 if %TEAMBASED
 if %MESSAGE_ALPHA
@@ -19,23 +65,23 @@ setAlign 2 2
 
 moveCursor 0, 6
 setSpecialFontFamily "Silhouette"
-if %SHOW_SPEED < 2
-	setColor 0 0 0 1
-	drawString "?"
-	moveCursor 0, -1
-	drawString "?"
-	moveCursor 0, -1
-	drawString "?"
-	moveCursor 1, 0
-	drawString "?"
-	moveCursor 1, 0
-	drawString "?"
-	moveCursor 0, 1
-	drawString "?"
-	moveCursor 0, 1
-	drawString "?"
-	moveCursor -1, -1
-endif
+
+setColor 0 0 0 1
+drawString "?"
+moveCursor 0, -1
+drawString "?"
+moveCursor 0, -1
+drawString "?"
+moveCursor 1, 0
+drawString "?"
+moveCursor 1, 0
+drawString "?"
+moveCursor 0, 1
+drawString "?"
+moveCursor 0, 1
+drawString "?"
+moveCursor -1, -1
+
 
 setColor 1 1 1 1
 drawString "?"
@@ -45,50 +91,50 @@ moveCursor -20, -6
 setFontFamily "Anton"
 
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, -1
+
 	setColorToTeamColor %TEAM
 	drawStatString %MESSAGE_ALPHA
 endif
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, -1
+
 	setColorToTeamColor %TEAM
 	drawStatString %MESSAGE_BETA
 endif
@@ -96,51 +142,51 @@ endif
 moveCursor 40, 0
 
 if %TEAM == #TEAM_BETA
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, -1
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStatString %MESSAGE_ALPHA
 endif
 
 if %TEAM == #TEAM_ALPHA
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, -1
+
 	setColorToTeamColor %TEAM_ENEMY
 	drawStatString %MESSAGE_BETA
 endif
@@ -148,50 +194,50 @@ endif
 moveCursor -20, 0
 if %TEAM == #TEAM_SPECTATOR
 	moveCursor -20, 0
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_ALPHA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_ALPHA
+	moveCursor 1, -1
+
 	setColorToTeamColor #TEAM_ALPHA
 	drawStatString %MESSAGE_ALPHA
 
 	moveCursor 40, 0
-    if %SHOW_SPEED < 2
-		setColor 0 0 0 1
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, -1
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor -1, 0
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 0, 1
-		drawStatString %MESSAGE_BETA
-		moveCursor 1, -1
-	endif
+
+	setColor 0 0 0 1
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, -1
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor -1, 0
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 0, 1
+	drawStatString %MESSAGE_BETA
+	moveCursor 1, -1
+
 	setColorToTeamColor #TEAM_BETA
 	drawStatString %MESSAGE_BETA
 endif
